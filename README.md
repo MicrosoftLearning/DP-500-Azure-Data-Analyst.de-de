@@ -1,13 +1,15 @@
-# DP-500: Entwerfen und Implementieren von Analyselösungen auf Unternehmensniveau mit Microsoft Azure und Microsoft Power BI
+**Dieser Kurs wird am **30.04.2024** eingestellt.  Nachdem der Kurs eingestellt wurde, werden alle GitHub-Repositorys entfernt. Vielen Dank!**
+
+# DP-500: Entwerfen und Implementieren von Analyselösungen auf Unternehmensebene mit Microsoft Azure
 
 - **Sind Sie ein MCT?** – Lesen Sie unser [GitHub-Benutzerhandbuch für MCTs](https://microsoftlearning.github.io/MCT-User-Guide/).
-- Leiten Sie Kursteilnehmer in das [Inhaltsverzeichnis](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/) für eine Liste der ILT-Module und der zugehörigen Labore.
+- Verweisen Sie Kursteilnehmer:innen auf das [Inhaltsverzeichnis](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/), wo eine Liste der ILT-Module und der zugehörigen Labs zur Verfügung steht.
 
 ## Was tun wir?
 
-- Um diesen Kurs zu unterstützen, müssen häufig Änderungen an den Kursinhalten vorgenommen werden, um sie an den verwendeten Power BI-Dienst anzupassen.  Wir veröffentlichen die Lab-Anweisungen und Lab-Dateien auf GitHub, um eine offene Zusammenarbeit zwischen den Kursautoren und MCTs zu ermöglichen, damit der Inhalt hinsichtlich Änderungen der Plattform auf dem neuesten Stand bleibt.
+- Um diesen Kurs zu unterstützen, müssen häufig Änderungen an den Kursinhalten vorgenommen werden, um sie an die im Kurs verwendeten Azure- und Power BI-Dienste anzupassen.  Wir veröffentlichen die Labanweisungen und Labdateien auf GitHub, um offene Beiträge zwischen den Kursautor:innen und MCTs zu ermöglichen und die Inhalte an aktuelle Änderungen in der Microsoft-Plattform anzupassen.
 
-- Wir hoffen, dass sich daraus ein beispielloses Gefühl der Zusammenarbeit in den Labs ergibt. Wenn sich Azure ändert und Ihnen dies bei einem Live-Vortrag auffällt, können Sie direkt im Lab-Quellcode eine Verbesserung vornehmen.  Helfen Sie Ihren MCT-Kollegen.
+- Wir hoffen, dass sich daraus ein beispielloses Gefühl der Zusammenarbeit in den Labs ergibt. Wenn sich Azure ändert und Ihnen dies bei einem Live-Vortrag auffällt, können Sie direkt im Lab-Quellcode eine Verbesserung vornehmen.  Helfen Sie Ihren MCTs.
 
 ## Wie kann ich diese Dateien in Bezug auf die freigegebenen MOC-Dateien verwenden?
 
@@ -15,7 +17,7 @@
 
 - Diese Dateien auf GitHub können in Verbindung mit dem Kursteilnehmer-Handbuch verwendet werden. Sie befinden sich jedoch in GitHub als zentrales Repository, um MCTs und Kursautoren eine gemeinsame Quelle für die neuesten Lab-Dateien zu bieten.
 
-- Kursleiter sollten GitHub vor jedem Kurs auf Änderungen überprüfen, die möglicherweise als Anpassung an die neuesten Azure-Dienste vorgenommen wurden, und die neuesten Dateien für den Kurs abrufen.
+- Kursleiter:innen sollten GitHub vor jedem Kurs auf Änderungen überprüfen, die möglicherweise zur Unterstützung der neuesten Azure- und Power BI-Dienste vorgenommen wurden, und die neuesten Dateien für den Kurs abrufen.
 
 ## Wie kann ich beitragen?
 

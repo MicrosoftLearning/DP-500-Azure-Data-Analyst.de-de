@@ -1,4 +1,4 @@
-**Dieser Kurs wird am **30.04.2024** eingestellt.  Nachdem der Kurs eingestellt wurde, werden alle GitHub-Repositorys entfernt. Vielen Dank!**
+**Dieser Kurs wird am **30.04.2024** eingestellt. Wir überwachen dieses Repository nicht mehr auf Issues und Pull Requests. Nachdem der Kurs eingestellt wurde, werden alle GitHub-Repositorys entfernt. Verwandte Inhalte finden Sie im [Microsoft Fabric-Repository](https://github.com/MicrosoftLearning/mslearn-fabric).**
 
 # DP-500: Entwerfen und Implementieren von Analyselösungen auf Unternehmensebene mit Microsoft Azure
 

@@ -5,23 +5,23 @@ lab:
 ---
 # Erstellen von Berechnungsgruppen
 
-## Überblick
+## Übersicht
 
 Die geschätzte Dauer dieses Labs beträgt 45 Minuten.
 
-In dieser Übung verwenden Sie Power BI Desktop und Tabellarischer Editor 2 zum Erstellen von Berechnungsgruppen.
+In diesem Lab verwenden Sie Power BI Desktop und Tabular Editor 2 zum Erstellen von Berechnungsgruppen.
 
 In diesem Lab lernen Sie Folgendes:
 
 -   Erstellen von Berechnungsgruppen
--   fo Calculation Items
--   Rangfolge der Berechnungsgruppe
--   Konfigurieren Sie visuelle Elemente für die Verwendung von Berechnungsgruppen.
+-   Formatieren von Berechnungselementen.
+-   Einrichten einer Rangfolge der Berechnungsgruppe.
+-   Konfigurieren von Visuals für die Verwendung von Berechnungsgruppen.
 
 ## Erste Schritte
 ### Klonen des Repositorys für diesen Kurs
 
-1. Öffnen Sie über das Startmenü die -Developer-Eingabeaufforderung.
+1. Öffnen Sie im Startmenü die Eingabeaufforderung
 
     ![](../images/command-prompt.png)
 
@@ -29,7 +29,7 @@ In diesem Lab lernen Sie Folgendes:
 
     `d:` 
 
-   Drücken Sie die EINGABETASTE.
+   Drücken Sie die Eingabetaste.
 
     ![](../images/command-prompt-2.png)
 
@@ -46,13 +46,13 @@ In diesem Lab lernen Sie Folgendes:
 
 Bereiten Sie Ihre Lab-Umgebung vor, indem Sie Tabular Editor 2 installieren, Power BI-Desktop einrichten, das Datenmodell überprüfen und Measures erstellen.
 
-### Herunterladen und Installieren des tabellarischen Editors 2
+### Herunterladen und Installieren des Tabular Editor 2
 
-Laden Sie tabellarische Editor 2 herunter, und installieren Sie sie, um die Erstellung von Berechnungsgruppen zu ermöglichen.
+Laden Sie den Tabular Editor herunter, und installieren Sie ihn, um die Erstellung von Berechnungsgruppen zu ermöglichen.
 
-**Wichtig:** *Wenn Sie den tabellarischen Editor 2 bereits in Ihrer VM-Umgebung installiert haben, fahren Sie mit der nächsten Aufgabe fort.*
+**Wichtig:***Wenn Sie den Tabular Editor 2 bereits in Ihrer VM-Umgebung installiert haben, fahren Sie mit der nächsten Aufgabe fort.*
 
-*Tabellarischer Editor ist ein Editor-Alternative-Tool zum Erstellen von tabellarischen Modellen für Analysis Services und Power BI. Tabellarischer Editor 2 ist ein Open Source-Projekt, das eine BIM-Datei bearbeiten kann, ohne auf Daten im Modell zuzugreifen.*
+ *Tabular Editor ist eine Editor-Alternative für die Erstellung von Tabellenmodellen für Analysis Services und Power BI. Tabular Editor 2 ist ein Open-Source-Projekt, das eine BIM-Datei bearbeiten kann, ohne auf Daten im Modell zuzugreifen.*
 
 1.  Stellen Sie sicher, dass Power BI Desktop geschlossen ist.
 
@@ -60,105 +60,105 @@ Laden Sie tabellarische Editor 2 herunter, und installieren Sie sie, um die Erst
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. Scrollen Sie nach unten zum **Abschnitt "Assets** ", und wählen Sie die **Datei "TabularEditor.Installer.msi** " aus. Dadurch wird die Dateiinstallation initiiert.
+1. Scrollen Sie nach unten zum Abschnitt **Assets** und wählen Sie die Datei **TabularEditor.Installer.msi** aus. Damit wird die Installation der Datei initiiert.
 
-1. Wählen Sie nach Abschluss die Option **"Datei** öffnen" aus, um das Installationsprogramm auszuführen.
+1. Wählen Sie nach Abschluss **Datei öffnen** aus, um das Installationsprogramm auszuführen.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/calculationgroups-downloadTE.png)
+    ![Grafische Benutzeroberfläche, Anwendung, automatisch erstellte Beschreibung](../images/calculationgroups-downloadTE.png)
 
-1.  Wählen Sie im Fenster "Tabellen-Editor-Installer" die Option "Weiter"** aus**.
+1.  Wählen Sie im Fenster Tabellen-Editor-Installer **Weiter** aus.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image2.png)
+    ![Grafische Benutzeroberfläche, Anwendung, automatisch erstellte Beschreibung](../images/image2.png)
 
-1.  Wählen Sie im **Schritt des Lizenzvertrags**, wenn Sie zustimmen, **"Ich stimme zu**" und dann "Weiter"** aus**.
+1.  Wählen Sie im Schritt **Lizenzvertrag**, wenn Sie zustimmen, **Ich stimme zu**und dann**Weiter** aus.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image3.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image3.png)
 
-1.  Wählen Sie im **Schritt "Installationsordner** auswählen" die Option "Weiter"** aus**.
-
-
-2.  Wählen Sie im **Schritt "Anwendungsverknüpfungen**" die Option "Weiter"** aus**.
+1.  Wählen Sie im Schritt **Installationsordner auswählen** **Weiter**aus.
 
 
-3. Wählen Sie im **Schritt "Installation** bestätigen" die Option "Weiter"** aus**.
+2.  Wählen Sie im Schritt **Tatenkombinationen für die Anwendung****Weiter** aus.
 
-4. Wenn Sie ein Popupfenster für die **Benutzerkontensteuerung** erhalten, wählen Sie "Ja" aus **.**
+
+3. Wählen Sie im Schritt **Installation bestätigen** **Weiter** aus.
+
+4. Wenn Ihnen ein Popup-Fenster **Benutzerkontensteuerung** angezeigt wird, wählen Sie **Ja**aus.
 
 5. Klicken Sie nach Abschluss der Installation auf **Schließen**.
 
-    *Tabellarischer Editor ist jetzt installiert und als externes Power BI-Desktoptool registriert.*
+    *Tabular Editor ist jetzt installiert und als externes Power BI-Desktoptool registriert.*
 
-### Öffnen Sie Power BI Desktop.
+### Einrichten von Power BI Desktop
 
 Jetzt öffnen Sie eine vordefinierte Power BI Desktop-Lösung.
 
-1.  Wechseln Sie in Explorer zum **Ordner "D:\\DP500\\Allfiles\\07\\Starter**".
+1.  Wechseln Sie im Datei-Explorer zum Ordner **D:\\DP500\\Allfiles\\07\\Starter**.
 
-2.  Um eine vordefinierte Power BI Desktop-Datei zu öffnen, doppelklicken Sie auf die **Sales Analysis - Create calculation groups.pbix** file.
+2.  Um eine vorab entwickelte Power BI Desktop-Datei zu öffnen, doppelklicken Sie auf die Datei **Umsatzanalyse - Create calculation groups.pbix**.
 
-3.  Um die Datei zu speichern, wählen Sie auf der Registerkarte "Datei **" die **Option **"Speichern unter**" aus.
+3.  Um die Datei zu speichern, wählen Sie auf der Registerkarte des Menübands **Datei** **Speichern unter** aus.
 
-4.  Wechseln Sie im **Fenster "Speichern unter** " zum **Ordner "D:\\DP500\\Allfiles\\07\\MySolution** ".
+4.  Wechseln Sie im Fenster **Speichern unter** zum Ordner **D:\\DP500\\Allfiles\\07\\MySolution**.
 
-5.  Klicken Sie auf **Speichern**.
+5.  Wählen Sie **Speichern**.
 
-6.  Wählen Sie die Registerkarte **External Tools** (Externe Tools) aus.
+6.  Wählen Sie die Registerkarte des Menübands **Externe Tools** aus.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image7.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image7.png)
 
-7.  Beachten Sie, dass Sie den Tabellarischen Editor über diese Menübandregisterkarte starten können.
+7.  Beachten Sie, dass Sie den Tabular Editor über diese Registerkarte des Menübands starten können.
 
-    ![Beschreibung wurde mit niedriger Zuverlässigkeit automatisch generiert](../images/image8.png)
+    ![Text Beschreibung automatisch generiert mit niedriger Konfidenz](../images/image8.png)
 
-    *In der nächsten Übung verwenden Sie den Tabellarischen Editor, um Berechnungsgruppen zu erstellen.*
+    *In der nächsten Übung verwenden Sie den Tabular Editor, um Berechnungsgruppen zu erstellen.*
 
-### Überprüfen Sie das Datenmodell.
+### Überprüfen des Datenmodells
 
 Überprüfen Sie das Datenmodell, um zu verstehen, wie Berechnungsgruppen auf dieses Modell angewendet werden.
 
-1.  Wechseln Sie in Power BI Desktop zur Datenansicht .
+1.  Auf dem Power BI Desktop links wechseln Sie zur Ansicht **Modell**.
 
     ![](../images/image9.png)
 
 2.  Verwenden Sie das Modelldiagramm, um den Modellentwurf zu überprüfen.
 
-    ![Grafische Benutzeroberfläche mit automatisch generierter Beschreibung.](../images/image10.png)
+    ![Grafische Benutzeroberfläche, Diagramm Beschreibung automatisch generiert](../images/image10.png)
 
-    *Das Modell besteht aus sieben Dimensionstabellen und zwei Faktentabellen. In der Tabelle " **Verkaufsdetails** " werden Die Verkaufsauftragsdetails gespeichert. In der **Tabelle "Währungssatz-Fakten** " werden die täglichen Wechselkurse für mehrere Währungen gespeichert. Es ist ein klassisches Starschemadesign.*
+    *Das Modell umfasst sieben Dimensionstabellen und zwei Faktentabellen. Die Faktentabelle **Umsatz** speichert Details zu Kundenaufträgen. Die Faktentabelle **Währungskurs** speichert tägliche Wechselkurse für mehrere Währungen. Es handelt sich um einen klassischen Sternschemaentwurf.*
 
 3.  Wechseln Sie zur **Berichtansicht**.
 
     ![](../images/image11.png)
 
-4.  Erweitern Sie im **Bereich "Daten** " (auf der rechten Seite) die **Tabelle "Vertrieb** ", um die Felder zu überprüfen.
+4.  Erweitern Sie im Bereich **Daten** (auf der rechten Seite) die Tabelle **Umsatz**, um die Felder zu überprüfen.
 
-    ![Beschreibung wurde mit niedriger Zuverlässigkeit automatisch generiert](../images/image12.png)
+    ![Text Beschreibung automatisch generiert mit niedriger Konfidenz](../images/image12.png)
 
-5.  Die beiden Felder der Tabelle **Sales** sind mit dem Sigma-Symbol (∑) versehen.
+5.  Beachten Sie, dass die beiden Tabellenfelder **Umsätze** mit dem Sigma-Symbol (∑) versehen sind.
 
-    Das Sigma-Symbol zeigt an, dass die Felder mithilfe von Aggregationsfunktionen, z. B. Summe, Anzahl oder Durchschnitt, automatisch zusammengefasst werden.
+    *Das Sigma-Symbol zeigt an, dass die Felder automatisch mit Hilfe von Aggregationsfunktionen wie Summe, Anzahl, Durchschnitt oder anderen zusammengefasst werden.*
 
-    *Wenn einem Modell Jedoch Berechnungsgruppen hinzugefügt werden, muss dieses automatische Verhalten deaktiviert werden. Das bedeutet, dass die Zusammenfassung nur durch Measures erreicht werden kann, die mithilfe von DAX-Formeln (Data Analysis Expressions) definiert werden. Im nächsten Vorgang fügen Sie dem Modell Measures hinzu.*
+    *Wenn jedoch Berechnungsgruppen zu einem Modell hinzugefügt werden, muss dieses automatische Verhalten deaktiviert werden. Das bedeutet, dass die Zusammenfassung nur durch Kennzahlen erreicht werden kann, die mit Hilfe von Data Analysis Expressions (DAX)-Formeln definiert werden. In der nächsten Aufgabe werden Sie dem Modell Kennzahlen hinzufügen.*
 
-### Measures erstellen
+### Erstellen von Measures
 
-Erstellen Sie drei umsatzbezogene Maßnahmen zur Vorbereitung auf die Erstellung Ihrer Berechnungsgruppen.
+Erstellen Sie drei umsatzbezogene Measures zur Vorbereitung auf die Erstellung Ihrer Berechnungsgruppen.
 
-1.  Klicken Sie im Bereich **Daten** mit der rechten Maustaste auf die Tabelle **Sales**, und wählen Sie dann die Option **Neues Quickmeasure** aus.
+1.  Klicken Sie im Bereich **Daten** mit der rechten Maustaste auf die Tabelle **Umsatz**, und wählen Sie dann **Neues Measure** aus.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image13.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image13.png)
 
-2.  Ersetzen Sie den Text in der Formelleiste (unter der Registerkarte) mit der folgenden Measure-Definition und drücken Sie dann die **Eingabetaste**.
+2.  Ersetzen Sie den Text in der Formelleiste (unter dem Menüband) mit der folgenden Measure-Definition und drücken Sie dann die **Eingabetaste**.
 
-    Tipp: Alle Formeln stehen zum Kopieren und Einfügen aus dem **D:\\DP500\\Allfiles 07\\Assets\\Snippets.txt\\** zur Verfügung.
+    Tipp! Alle Formeln sind zum Kopieren und Einfügen aus der Datei **D:\\DP500\\Allfiles\\07\\Assets\\Snippets.txt** verfügbar.
 
     DAX
 
     ```Sales = SUM ( 'Sales'[Sales Amount] )```
 
-3.  Legen Sie im kontextbezogenen Menüband **Measuretools** in der Gruppe **Formatierung** die Dezimalstellen auf **2** fest.
+3.  Legen Sie im kontextbezogenen Menüband **Measure-Tools** in der Gruppe **Formatierung** die Dezimalstellen auf **2** fest.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image14.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image14.png)
 
 4.  Erstellen und formatieren Sie auf gleiche Weise ein zweites Measure mit dem Namen **Cost** und der folgenden Definition:
 
@@ -172,41 +172,39 @@ Erstellen Sie drei umsatzbezogene Maßnahmen zur Vorbereitung auf die Erstellung
 
     ```Profit = [Sales] - [Cost]```
 
-6.  Klicken Sie Bereich **Felder** mit der rechten Maustaste auf das Feld **Sales Amount** und wählen Sie dann die Option **Ausblenden** aus.
+6.  Klicken Sie im Bereich **Daten** mit der rechten Maustaste auf das Feld **Umsatzbetrag**, und wählen Sie dann **Ausblenden**.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image15.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image15.png)
 
 7.  Blenden Sie auch das Feld **Total Product Cost** aus.
 
-8.  Nun wird die Tabelle **Sales** im Bereich **Felder** als Erstes angezeigt und ist mit einem Taschenrechnersymbol versehen.
+8.  Beachten Sie, dass die Tabelle **Umsätze** jetzt im Fenster **Daten** an erster Stelle steht und mit einem Symbol für einen Multirechner versehen ist.
 
-    ![Beschreibung wurde mit niedriger Zuverlässigkeit automatisch generiert](../images/image16.png)
+    ![Anwendungsbeschreibung automatisch generiert mit geringer Konfidenz](../images/image16.png)
 
-    *Wenn eine Tabelle nur sichtbare Measures enthält, wird sie oben im Bereich angezeigt. Auf diese Weise verhält es sich wie eine Measuregruppe (ein Objekt eines mehrdimensionalen Modells). Verwechseln Sie diese kosmetische Darstellung eines tabellarischen Modells nicht mit DAX-Berechnungsgruppen.*
+    *Wenn eine Tabelle nur sichtbare Kennzahlen enthält, wird sie im oberen Bereich des Fensters angezeigt. Auf diese Weise verhält sie sich wie eine Kennzahlengruppe (ein Objekt eines multidimensionalen Modells). Verwechseln Sie diese kosmetische Darstellung eines Tabellenmodells nicht mit DAX-Berechnungsgruppen.*
 
-## Erstellen von Berechnungsgruppen
+## Erstellen einer Berechnungsgruppe
 
-In dieser Einheit werden Sie zwei Berechnungsgruppen erstellen. Die erste unterstützt Zeitintelligenz. Die zweite unterstützt die Währungsumrechnung.
+Nun erstellen Sie zwei Berechnungsgruppen. Die erste unterstützt die Zeitintelligenz. Die zweite unterstützt die Währungsumrechnung.
 
 ### Erstellen der Berechnungsgruppe "Zeitintelligenz"
 
-Wechseln Sie zu Tabular Editor und wählen Sie die Berechnungsgruppe **Time Intelligence** aus. Er vereinfacht das Erstellen vieler zeitbezogener Berechnungen, unter anderem Kennzahlen zum Vorjahr (PY), Jahresvergleiche (year-over-year, YoY) sowie prozentuale Jahresvergleiche (YoY %). Mithilfe der Berechnungsgruppe und der Verwendung verschiedener Zeitintelligenzberechnungen können Sie jedes Measure analysieren.
+Verwenden Sie den Tabular Editor, um die Berechnungsgruppe **Zeitintelligenz** zu erstellen. Er vereinfacht das Erstellen vieler zeitbezogener Berechnungen, unter anderem Kennzahlen zum Vorjahr (PY), Jahresvergleiche (year-over-year, YoY) sowie prozentuale Jahresvergleiche (YoY %). Mithilfe der Berechnungsgruppe und der Verwendung verschiedener Zeitintelligenzberechnungen können Sie jedes Measure analysieren.
 
 *Power BI Desktop unterstützt nicht die Erstellung oder Verwaltung von Berechnungsgruppen.*
 
-   > **Tipp**: Alle Syntax steht zum Kopieren und Einfügen aus der Datei "D:\DP500\Allfiles\07\Assets\Snippets.txt" zur Verfügung.
+   > **Tipp**: Die gesamte Syntax ist zum Kopieren und Einfügen aus D:\DP500\Allfiles\07\Assets\Snippets.txt verfügbar.
 
 1.  Wählen Sie auf der Registerkarte **Externe Tools** im Menüband die Option **Tabular Editor** aus.
 
-    ![Beschreibung wurde mit niedriger Zuverlässigkeit automatisch generiert](../images/image17.png)
+    ![Text Beschreibung automatisch generiert mit niedriger Konfidenz](../images/image17.png)
 
-    *Der tabellarische Editor wird in einem neuen Fenster geöffnet und stellt eine Liveverbindung mit dem datenmodell her, das in Power BI Desktop gehostet wird. Änderungen am Modell im tabellarischen Editor werden erst an Power BI Desktop weitergegeben, wenn Sie sie speichern.*
+    *Der Tabular Editor wird in einem neuen Fenster geöffnet und stellt eine Liveverbindung mit dem datenmodell her, das in Power BI Desktop gehostet wird. Änderungen am Modell im Tabular Editor werden erst an Power BI Desktop weitergegeben, wenn Sie sie speichern.*
 
 2.  Klicken Sie im linken Bereich des Fensters **Tabular Editor** mit der rechten Maustaste auf den Ordner **Tabellen**, und wählen Sie dann \>Neu erstellen ** Berechnungsgruppe** aus.
 
-    ![Grafische Benutzeroberfläche, Text, Anwendung
-    
-Automatisch generierte Beschreibung](../images/image18.png)
+    ![Grafische Benutzeroberfläche, Text, Anwendung, Tabelle Beschreibung automatisch generiert](../images/image18.png)
 
 3.  Ersetzen Sie den Standardnamen im linken Bereich durch **Zeitintelligenz** und drücken Sie dann die **Eingabetaste**.
 
@@ -214,21 +212,19 @@ Automatisch generierte Beschreibung](../images/image18.png)
 
 5.  Wählen Sie die Spalte **Name** aus.
 
-    ![Grafische Benutzeroberfläche
-    
-Automatisch generierte Beschreibung](../images/image19.png)
+    ![Grafische Benutzeroberfläche Beschreibung automatisch generiert mit geringer Konfidenz](../images/image19.png)
 
     *Die Berechnungsgruppe umfasst diese einzelne Spalte, während Datenzeilen die Berechnungsgruppe definieren. Es empfiehlt sich, die Spalte umzubenennen, um das Thema der Berechnungen widerzuspiegeln.*
 
-6.  Wählen Sie im Bereich **Eigenschaften** (unten rechts) die Eigenschaft **Name** und geben Sie als neuen Namen **Time Calculation** (Zeitberechnung) ein.
+6.  Wählen Sie im Bereich **Eigenschaften** (unten rechts) die Eigenschaft **Name** und benennen Sie sie in **Zeitberechnung** um.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image20.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image20.png)
 
-7.  Zum Erstellen eines Berechnungselements klicken Sie mit der rechten Maustaste auf die Tabelle **Time Intelligence** und wählen dann **Neu erstellen**Calculation Item aus.
+7.  Um ein Berechnungselement zu erstellen, klicken Sie mit der rechten Maustaste auf die Tabelle **Zeitintelligenz** und wählen Sie dann **Neu erstellen**\>**Berechnungselement** aus.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image21.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image21.png)
 
-8.  Ersetzen Sie im linken Bereich den Standardnamen durch **Current** und drücken Sie die **Eingabetaste**.
+8.  Ersetzen Sie im linken Bereich den Standardnamen durch **Aktuell** und drücken Sie die **Eingabetaste**.
 
 9.  Geben Sie im Bereich **Ausdrucks-Editor** (über dem Bereich **Eigenschaften**) folgende Formel ein:
 
@@ -236,13 +232,11 @@ Automatisch generierte Beschreibung](../images/image19.png)
 
     ```SELECTEDMEASURE ()```
 
-    ![Grafische Benutzeroberfläche, Text, Anwendung
-    
-Automatisch generierte Beschreibung](../images/image22.png)
+    ![Grafische Benutzeroberfläche, Text, AnwendungAutomatisch generierte Beschreibung](../images/image22.png)
 
-    Die DAX-Funktion  gibt eine Referenz zu dem Measure zurück, das sich bei der Auswertung des Berechnungselements aktuell im Kontext befindet.
+    *Die Funktion SELECTEDMEASURE gibt einen Verweis auf das Measure zurück, das sich bei der Auswertung der Berechnungsposition im aktuellen Kontext befindet.*
 
-10. Wählen Sie in der Symbolleiste des Bereichs **Ausdrucks-Editor** das Häkchen zum Akzeptieren von Änderungen aus.
+10. Wählen Sie in der Symbolleiste des **Ausdruckseditors** die erste Schaltfläche, um Änderungen zu übernehmen.
 
     ![](../images/image23.png)
 
@@ -252,7 +246,7 @@ Automatisch generierte Beschreibung](../images/image22.png)
 
     ```CALCULATE ( SELECTEDMEASURE (), SAMEPERIODLASTYEAR ( 'Date'[Date] ) )```
 
-    Die Formel berechnet den Wert des ausgewählten Measures im Vorjahr.
+    *Die Formel für das Vorjahr (PY) berechnet den Wert für das ausgewählte Measure im Vorjahr.*
 
 12. Erstellen Sie ein drittes Berechnungselement mit dem Namen **YoY**, indem Sie folgende Formel verwenden:
 
@@ -262,7 +256,7 @@ Automatisch generierte Beschreibung](../images/image22.png)
         - CALCULATE ( SELECTEDMEASURE (), 'Time Intelligence'[Time Calculation] = "PY" )
     ```
 
-    Die YoY-Formel berechnet die Differenz des ausgewählten Measures zwischen aktuellem Jahr und Vorjahr.
+    *Die Year-over-Year (YoY)-Formel berechnet die Differenz des ausgewählten Measures des aktuellen Jahres zum Vorjahr.*
 
 13. Erstellen Sie ein viertes Berechnungselement mit dem Namen **YoY %**, indem Sie folgende Formel verwenden:
 
@@ -273,9 +267,9 @@ Automatisch generierte Beschreibung](../images/image22.png)
         CALCULATE ( SELECTEDMEASURE (), 'Time Intelligence'[Time Calculation] = "PY" )
     )
     ```
-    Die YoY %-Formel berechnet die prozentuale Veränderung des ausgewählten Measures im Vergleich zum Vorjahr.
+    *Die Formel für den prozentualen Jahresvergleich (YoY %) berechnet die prozentuale Veränderung des ausgewählten Measures gegenüber dem Vorjahr.*
 
-14. Legen Sie im Bereich **Eigenschaften** für die Eigenschaft **Format String Expression** folgende Formel fest: 
+14. Legen Sie im Bereich **Eigenschaften** für die Eigenschaft **Formatzeichenfolge-Ausdruck** folgende Formel fest: 
     ```
     "0.00%;-0.00%;0.00%"
     ```
@@ -288,13 +282,13 @@ Automatisch generierte Beschreibung](../images/image24.png)
 
 15. Überprüfen Sie, dass die Berechnungsgruppe **Time Intelligence** vier Berechnungselemente hat.
 
-    ![Automatisch generierte Beschreibung](../images/image25.png)
+    ![Text Beschreibung automatisch generiert](../images/image25.png)
 
-16. Zum Speichern der Änderungen am Power BI Desktop-Modell wählen Sie im Menü Datei die Option Speichern aus (oder drücken Sie die Tastenkombination Strg+S).
+16. Um die Änderungen am Power BI Desktop-Modell zu speichern, wählen Sie im Menü **Datei** die Option **Speichern** aus.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image26.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image26.png)
 
-    **Tipp:** *Es ist auch möglich, die Symbolleistenschaltfläche auszuwählen oder STRG+S** zu drücken**.*
+    **Tipp:***Es ist auch möglich, die Symbolleistenschaltfläche auszuwählen oder STRG+S** zu drücken**.*
 
 17. Wechseln Sie zurück zu Power BI Desktop.
 
@@ -302,69 +296,67 @@ Automatisch generierte Beschreibung](../images/image24.png)
 
     ![](../images/image27.png)
 
-19. Wählen Sie rechts im Banner die Option **Jetzt aktualisieren** aus.
+19. Wählen Sie auf der rechten Seite des Banners **Jetzt aktualisieren** aus.
 
     ![](../images/image28.png)
 
     *Beim Aktualisieren werden die Änderungen angewendet, indem die Berechnungsgruppe als Modelltabelle erstellt wird. Anschließend werden die Berechnungselemente als Datenzeilen geladen.*
 
-20. Erweitern Sie im Bereich **Felder** die Tabelle **Time Intelligence**.
+20. Erweitern Sie im Bereich **Daten** die Tabelle **Zeitintelligenz**.
 
-    ![Beschreibung wurde mit mittlerer Zuverlässigkeit automatisch generiert.](../images/image29.png)
+    ![Text Beschreibung automatisch generiert mit mittlerer Konfidenz](../images/image29.png)
 
-### Aufgabe 4: Matrixvisual aktualisieren
+### Matrixvisual aktualisieren
 
-Jetzt ändern Sie die Matrix visuell, um die **Spalte "Zeitberechnung** " zu verwenden.
+Jetzt ändern Sie die Matrix visuell, um die Spalte **Zeitberechnung** zu verwenden.
 
 1.  Wählen Sie im Bericht das Matrixvisual aus.
 
-2.  Wählen Sie dann im Bereich **Visualisierungen** in der Quelle **Werte** das **X** aus, um das Feld **Sales Amount** zu entfernen.
+2.  Wählen Sie im Bereich **Visualisierungen** im Well **Werte** die Option **X**aus, um das Feld **Umsatzbetrag** zu entfernen.
 
     ![Grafische Benutzeroberfläche, Text, Anwendung, E-Mail – Beschreibung automatisch erstellt](../images/image30.png)
 
-3.  Ziehen Sie das Feld **Sales** aus dem Bereich **Felder** in der Tabelle **Sales** in die Quelle **Werte**.
+3.  Ziehen Sie im Bereich **Daten** in der Tabelle **Umsätze** das Feld **Umsätze** in den Well **Werte**.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image31.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image31.png)
 
-4.  Ziehen Sie das Feld **Time Calculation** aus dem Bereich **Felder** in der Tabelle **Time Intelligence** in die Quelle **Spalten**.
+4.  Ziehen Sie im Bereich **Daten** in der Tabelle **Zeitinformationen** das Feld **Zeitberechnung** in den Well **Spalten**.
 
-    ![Grafische Benutzeroberflächenanwendung Word Beschreibung automatisch generiert](../images/image32.png)
+    ![Grafische Benutzeroberfläche, Anwendung, Word Beschreibung automatisch generiert](../images/image32.png)
 
-5.  Überprüfen Sie, dass das Matrixvisual ein Raster aus zeitbezogenen **Sales**-Measurewerten, die nach Monaten gruppiert sind, anzeigt.
+5.  Vergewissern Sie sich, dass die Matrixdarstellung ein Raster zeitbezogener **Umsatz**-Measure-Werte zeigt, die nach Monaten gruppiert sind.
 
-    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image33.png)
+    ![Grafische Benutzeroberfläche, Anwendung, Tabelle, Excel Beschreibung automatisch erstellt](../images/image33.png)
 
-    Erinnern Sie sich aber, dass Sie den Formatzeichenfolgenausdruck für das Measure YoY % als Prozentzahl formatiert haben.
+    *Das Format der Werte wird von den ausgewählten Measures abgeleitet. Erinnern Sie sich jedoch daran, dass Sie den Formatzeichenfolge-Ausdruck für das **YoY %**-Measure so eingestellt haben, dass ein prozentuales Format erzeugt wird.*
 
-### Aufgabe 5: Eine Berechnungsgruppe zur Währungsumrechnung erstellen
+### Erstellen einer Berechnungsgruppe Währungsumrechnung
 
-Jetzt erstellen Sie die **Berechnungsgruppe "Währungskonvertierung** ". Sie bietet Flexibilität, die Measures der **Tabelle "Vertrieb** " in eine ausgewählte Währung umzurechnen. Sie wendet auch die entsprechende Formatierung für die ausgewählte Währung an.
+Jetzt erstellen Sie die Berechnungsgruppe **Währungsumrechnung**. Sie bietet die Möglichkeit, die Measures der Tabelle **Umsätze** in eine ausgewählte Währung umzurechnen. Sie wendet auch die entsprechende Formatierung für die ausgewählte Währung an.
 
 1.  Wechseln Sie in Power BI Desktop zur **Datenansicht**.
 
     ![Datenansicht](../images/image34.png)
 
-2.  Wählen Sie im **Bereich "Daten** " die **Tabelle "Währung** " aus.
+2.  Wählen Sie im Bereich **Daten** die Tabelle **Währung** aus.
 
-3.  Überprüfen Sie die ausgeblendete Spalte **FormatString**, welche Formatzeichenfolgenausdrücke enthält.
+3.  Beachten Sie die ausgeblendete Spalte **FormatString**, die Formatzeichenfolge-Ausdrücke für Spaltenwerte enthält
 
-    ![Grafische Benutzeroberfläche
-    
-Automatisch generierte Beschreibung](../images/image35.png)
+    ![Grafische Benutzeroberfläche Beschreibung automatisch generiert mit geringer Konfidenz](../images/image35.png)
 
     *Sie verwenden einen DAX-Ausdruck, um die Formatzeichenfolge der ausgewählten Währung anzuwenden.*
 
-4.  Wechseln zum Tabellarischen Editor.
+4.  Wechseln zum Tabular Editor.
 
-5.  Aufgabe 5: Eine Berechnungsgruppe zur Währungsumrechnung erstellen
+5.  Erstellen einer Berechnungsgruppe mit dem Namen **Währungsumrechnung**.
 
     *Aufgrund der Wiederholung von Aufgaben werden kurze Anweisungen bereitgestellt. Bei Bedarf können Sie sich auf die Schritte in der ersten Aufgabe dieser Übung beziehen.*
 
-    ![Automatisch generierte Beschreibung](../images/image36.png)
+    ![Text Beschreibung automatisch generiert](../images/image36.png)
 
-6.  Benennen Sie die Spalte **Name** in **Converted Currency** um.
+6.  Benennen Sie die Spalte **Name** in **Umgerechnete Währung** um.
 
-    ![Beschreibung wurde mit niedriger Zuverlässigkeit automatisch generiert](../images/image37.png)
+    ![Text Beschreibung automatisch generiert mit niedriger Konfidenz](../images/image37.png)
 
 7.  Erstellen Sie ein Berechnungselement mit dem Namen **Currency Conversion**, indem Sie folgende Formel verwenden:
 
@@ -399,9 +391,9 @@ Automatisch generierte Beschreibung](../images/image35.png)
 
     ![](../images/image38.png)
 
-12. Wählen Sie die Visualisierung „Matrix“ aus.
+12. Auswählen des Matrix-Visuals
 
-13. Ziehen Sie das Feld **Converted Currency** aus dem Bereich **Felder** in der Tabelle **Currency Conversion** in den Bereich **Filter** im **Filter** der visuellen Gruppe.
+13. Ziehen Sie im Bereich **Daten** in der Tabelle **Währungsumrechnung** das Feld **Umgerechnete Währung** in den Bereich **Filter** in die Gruppe **Filter für dieses Visual**.
 
     ![Grafische Benutzeroberfläche, Text, Anwendung
     
@@ -415,37 +407,37 @@ Automatisch generierte Beschreibung](../images/image40.png)
 
 15. Beachten Sie, dass die Wertformate aktualisiert werden, um US-Dollarbeträge eindeutig zu beschreiben.
 
-    ![Automatisch generierte Beschreibung](../images/image41.png)
+    ![Text Beschreibung automatisch generiert](../images/image41.png)
 
-16. Wählen Sie im Slicer **Currency** eine andere Währung aus und überprüfen Sie dann im Matrix-Visual, dass sich die Werte aktualisiert haben.
+16. Wählen Sie im Slicer **Währung** eine andere Währung aus, und beachten Sie die aktualisierten Werte und Formatierungen in der Matrixdarstellung.
 
 17. Stellen Sie den Slicer **Currency** wieder zurück auf **US-Dollar**.
 
-    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image42.png)
+    ![Grafische Benutzeroberfläche, Anwendung, Teams Beschreibung automatisch erstellt](../images/image42.png)
 
 18. Beachten Sie jedoch, dass die **YoY%** -Werte keine Prozentsätze mehr sind.
 
-    *Es gibt ein Problem. Sowohl die **Berechnungsgruppen "Zeitintelligenz** " als **auch "Währungskonvertierung** " werden angewendet, die Berechnungsreihenfolge ist jedoch falsch. Gegenwärtig erfolgt die **YoY %** -Berechnung, dann addiert die Währungsumrechnung tägliche Berechnungsergebnisse über den Monat. Um das richtige Ergebnis zu erzielen, muss die Berechnungsreihenfolge umgekehrt werden. Sie können die Berechnungsreihenfolge steuern, indem Sie Rangfolgewerte festlegen.*
+    *Es gibt ein Problem. Die beiden Berechnungsgruppen **Zeitintelligenz** und **Währungsumrechnung** werden angewendet, aber die Reihenfolge der Berechnungen ist falsch. Derzeit erfolgt die **Jahresberechnung in %**, dann addiert die Währungsumrechnung die täglichen Berechnungsergebnisse über den Monat. Um das richtige Ergebnis zu erzielen, muss die Reihenfolge der Berechnung umgekehrt werden. Sie können die Berechnungsreihenfolge steuern, indem Sie Vorrangwerte festlegen.*
 
-### Rangfolge der Berechnungsgruppe
+### Ändern der Vorrangigkeit von Berechnungsgruppen
 
 Jetzt ändern Sie die Rangfolge der Berechnungsgruppe der beiden Berechnungsgruppen.
 
-1.  Wechseln zum Tabellarischen Editor.
+1.  Wechseln zum Tabular Editor.
 
-2.  Wählen Sie im linken Bereich die **Berechnungsgruppe "Zeitintelligenz** " aus.
+2.  Wählen Sie im linken Bereich die Berechnungsgruppe **Zeitintelligenz** aus.
 
-    ![Automatisch generierte Beschreibung](../images/image43.png)
+    ![Text Beschreibung automatisch generiert](../images/image43.png)
 
 3.  Legen Sie im Bereich **Eigenschaften** die Eigenschaft **Calculation Group Precedence** auf **20** fest.
 
-    ![Grafische Benutzeroberfläche, Anwendung, Beschreibung automatisch erstellt](../images/image44.png)
+    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image44.png)
 
     *Je höher der Wert ist, desto höher ist die Rangfolge der Anwendung. Die Berechnungsgruppe mit der höheren Rangfolge wird also zuerst angewendet.*
 
 4.  Legen Sie die Berechnungsgruppenfolge für die Berechnungsgruppe **Currency Conversion** auf **10** fest.
 
-    ![Grafische Benutzeroberflächenanwendung Beschreibung automatisch generiert](../images/image45.png)
+    ![Grafische Benutzeroberfläche, Anwendung, Tabelle Beschreibung automatisch generiert](../images/image45.png)
 
     *Diese Konfigurationen stellen sicher, dass die Berechnung der **Zeitintelligenz** später erfolgt.*
 
@@ -455,11 +447,11 @@ Jetzt ändern Sie die Rangfolge der Berechnungsgruppe der beiden Berechnungsgrup
 
 7.  Beachten Sie, dass die **YoY%** -Werte jetzt Prozentwerte sind.
 
-    ![Grafische Benutzeroberfläche mit automatisch generierter Beschreibung.](../images/image46.png)
+    ![Grafische Benutzeroberfläche, Text Beschreibung automatisch generiert](../images/image46.png)
 
 ### Abschluss
 
-In dieser Aufgabe werden Sie fertig stellen.
+Mit dieser Aufgabe schließen Sie das Modul ab.
 
 1.  Speichern Sie die Power BI Desktop-Datei.
 
@@ -467,4 +459,4 @@ In dieser Aufgabe werden Sie fertig stellen.
 
 2.  Schließen Sie Power BI Desktop.
 
-3.  Schließen Sie den tabellarischen Editor.
+3.  Schließen Sie den Tabular Editor.

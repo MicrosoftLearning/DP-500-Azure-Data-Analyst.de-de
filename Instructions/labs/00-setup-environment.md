@@ -1,6 +1,6 @@
 ---
 lab:
-  title: Einrichten einer eigenen Umgebung
+  title: Einrichten Ihrer eigenen Umgebung
   module: Setup your own environment
 ---
 
@@ -14,25 +14,25 @@ Setupdetails und Datenbanksicherungsdateien finden Sie auf [GitHub](https://gith
 
 > &#128221; Die folgenden Anweisungen beziehen sich auf einen Windows 11-Computer.
 
-### Windows 11 (Betriebssystem)
+### Windows 11 (OS)
 
-1. Installieren Sie Windows 11.
+1. Installieren Sie Windows 11.
 
-2. Alle verfügbaren Updates anwenden
+2. Anwenden aller verfügbaren Updates.
 
 ### Microsoft Edge
 
-1. Die neueste Version von Microsoft Edge von [microsoft.com/edge] installieren.
+1. Installieren Sie die neueste Version von Microsoft Edge von [microsoft.com/edge].
 
 ### Git
 
-1. Von [git-scm.com/downloads] herunterladen und installieren.
+1. Herunterladen und Installieren von [git-scm.com/downloads].
 
     - Verwenden Sie die Standardoptionen im Installationsprogramm.
 
 ### SQL Server Management Studio
 
-1. Von [https://aka.ms/ssmsfullsetup] herunterladen und installieren.
+1. Herunterladen und installieren von [https://aka.ms/ssmsfullsetup].
 
     - Verwenden Sie die Standardoptionen im Installationsprogramm.
 
@@ -41,10 +41,10 @@ Setupdetails und Datenbanksicherungsdateien finden Sie auf [GitHub](https://gith
 1. Laden Sie die Anwendung aus dem Microsoft Store herunter, und installieren Sie sie. Wenn Sie keinen Zugriff auf den Microsoft Store haben, laden Sie sie aus dem [Internet](https://www.microsoft.com/download/details.aspx?id=58494) herunter.
 
     - Verwenden Sie die Standardoptionen im Installationsprogramm.
-    - Aktuelle Version für Labs ist **April 2023**
+    - Die aktuelle Version für Labs ist **April 2023**
 
 ### Power BI Report Builder
 
-1. Laden Sie den Power BI-Berichts-Generator aus dem [Internet](https://www.microsoft.com/download/details.aspx?id=58158) herunter, und installieren Sie ihn.
+1. Laden Sie Power BI Report Builder aus dem [Web](https://www.microsoft.com/download/details.aspx?id=58158) herunter und installieren Sie ihn.
 
     - Verwenden Sie die Standardoptionen im Installationsprogramm.

@@ -27,7 +27,7 @@ In dieser Übung öffnen Sie eine vordefinierte Power BI Desktop-Lösung, um meh
 ## Erste Schritte
 ### Klonen des Repositorys für diesen Kurs
 
-1. Öffnen Sie über das Startmenü die Eingabeaufforderung.
+1. Öffnen Sie im Startmenü die Eingabeaufforderung
    
     ![](../images/command-prompt.png)
 
@@ -35,7 +35,7 @@ In dieser Übung öffnen Sie eine vordefinierte Power BI Desktop-Lösung, um meh
 
     `d:` 
 
-   Drücken Sie die EINGABETASTE.
+   Drücken Sie die Eingabetaste.
    
     ![](../images/command-prompt-2.png)
 
@@ -49,9 +49,9 @@ In dieser Übung öffnen Sie eine vordefinierte Power BI Desktop-Lösung, um meh
    
 1. Öffnen Sie das D-Laufwerk im Datei-Explorer, um sicherzustellen, dass die Dateien heruntergeladen wurden.
 
-### Öffnen Sie Power BI Desktop.
+### Einrichten von Power BI Desktop
 
-In dieser Aufgabe öffnen Sie eine vordefinierte Power BI Desktop-Lösung.
+In dieser Aufgabe öffnen Sie eine vorab entwickelte Power BI Desktop-Lösung.
 
 1. Um den Datei-Explorer zu öffnen, wählen Sie auf der Taskleiste den Shortcut **File Explorer** aus.
 
@@ -63,13 +63,13 @@ In dieser Aufgabe öffnen Sie eine vordefinierte Power BI Desktop-Lösung.
 
 5. Navigieren Sie im Fenster **Speichern unter** zum Ordner **D:\PL300\MySolution**.
 
-6. Klicken Sie auf **Speichern**.
+6. Wählen Sie **Speichern**.
 
 ### Überprüfen Sie das Datenmodell
 
 In dieser Aufgabe überprüfen Sie das Datenmodell.
 
-1. Auf dem Power BI Desktop wechseln Sie zur Ansicht **Modell**.
+1. Auf dem Power BI Desktop links wechseln Sie zur Ansicht **Modell**.
 
     ![](../images/dp500-work-with-model-relationships-image2.png)
 
@@ -274,7 +274,7 @@ In dieser Aufgabe deaktivieren Sie zwei Beziehungsoptionen.
 
     *Im Allgemeinen ist es in Ihrer täglichen Arbeit in Ordnung, diese Optionen aktiviert zu halten. Für die Zwecke dieser Übung erstellen Sie jedoch explizit Beziehungen.*
 
-4. Wählen Sie **OK** aus.
+4. Klickan Sie auf **OK**.
 
     ![](../images/dp500-work-with-model-relationships-image32.png)
 
@@ -439,7 +439,7 @@ In dieser Aufgabe erstellen Sie ein Measure, um den nicht versandten Verkaufsbet
 
 ### Abschluss
 
-In dieser Aufgabe werden Sie fertig stellen.
+Mit dieser Aufgabe haben Sie das Modul abgeschlossen.
 
 1. Speichern Sie die Power BI Desktop-Datei.
 

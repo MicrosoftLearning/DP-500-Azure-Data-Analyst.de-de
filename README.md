@@ -3,11 +3,11 @@
 # DP-500: Entwerfen und Implementieren von Analyselösungen auf Unternehmensebene mit Microsoft Azure
 
 - **Sind Sie ein MCT?** – Lesen Sie unser [GitHub-Benutzerhandbuch für MCTs](https://microsoftlearning.github.io/MCT-User-Guide/).
-- Verweisen Sie Kursteilnehmer:innen auf das [Inhaltsverzeichnis](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/), wo eine Liste der ILT-Module und der zugehörigen Labs zur Verfügung steht.
+- Verweisen Sie die Lernenden auf das [Inhaltsverzeichnis](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/) für eine Liste der ILT-Module und der zugehörigen Übungen.
 
 ## Was tun wir?
 
-- Um diesen Kurs zu unterstützen, müssen häufig Änderungen an den Kursinhalten vorgenommen werden, um sie an die im Kurs verwendeten Azure- und Power BI-Dienste anzupassen.  Wir veröffentlichen die Labanweisungen und Labdateien auf GitHub, um offene Beiträge zwischen den Kursautor:innen und MCTs zu ermöglichen und die Inhalte an aktuelle Änderungen in der Microsoft-Plattform anzupassen.
+- Zur Unterstützung dieses Kurses müssen wir die Kursinhalte regelmäßig aktualisieren, um sie mit den im Kurs verwendeten Azure- und Power BI-Diensten auf dem neuesten Stand zu halten.  Wir veröffentlichen die Lab-Anweisungen und Lab-Dateien auf GitHub, um eine offene Zusammenarbeit zwischen den Kursautoren*innen und MCTs zu ermöglichen, damit der Inhalt bei Änderungen an der Microsoft-Plattform auf dem neuesten Stand bleibt.
 
 - Wir hoffen, dass sich daraus ein beispielloses Gefühl der Zusammenarbeit in den Labs ergibt. Wenn sich Azure ändert und Ihnen dies bei einem Live-Vortrag auffällt, können Sie direkt im Lab-Quellcode eine Verbesserung vornehmen.  Helfen Sie Ihren MCTs.
 
@@ -17,7 +17,7 @@
 
 - Diese Dateien auf GitHub können in Verbindung mit dem Kursteilnehmer-Handbuch verwendet werden. Sie befinden sich jedoch in GitHub als zentrales Repository, um MCTs und Kursautoren eine gemeinsame Quelle für die neuesten Lab-Dateien zu bieten.
 
-- Kursleiter:innen sollten GitHub vor jedem Kurs auf Änderungen überprüfen, die möglicherweise zur Unterstützung der neuesten Azure- und Power BI-Dienste vorgenommen wurden, und die neuesten Dateien für den Kurs abrufen.
+- Kursleiter*innen sollten GitHub vor jedem Kurs auf Änderungen überprüfen, die zur Unterstützung der neuesten Azure- und Power BI-Dienste vorgenommen wurden, und die neuesten Dateien für den Kurs abrufen.
 
 ## Wie kann ich beitragen?
 

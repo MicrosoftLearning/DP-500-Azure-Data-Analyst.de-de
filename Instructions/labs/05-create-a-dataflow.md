@@ -6,11 +6,11 @@ lab:
 
 # Erstellen eines Dataflows
 
-## Überblick
+## Übersicht
 
 **Die geschätzte Dauer dieses Labs beträgt 45 Minuten.**
 
-Anschließend erstellen Sie einen Dataflow, um Datumsdimensionsdaten bereitzustellen, die aus dem Azure Synapse Adventure Works-Data Warehouse bezogen werden. Der Dataflow bietet eine konsistente Definition von datumsbezogenen Daten für die Verwendung durch die Geschäftsanalysten der Organisation.
+In diesem Lab erstellen Sie einen Datenfluss, um Datumsdimensions-Daten bereitzustellen, die aus dem Azure Synapse Adventure Works-Data Warehouse bezogen werden. Der Dataflow bietet eine konsistente Definition von datumsbezogenen Daten für die Verwendung durch die Geschäftsanalysten der Organisation.
 
 In diesem Lab lernen Sie Folgendes:
 
@@ -24,16 +24,16 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
 
 ### Laden von Daten in Azure Synapse Analytics
 
-   > **Hinweis**: Wenn Sie bereits Daten mithilfe eines Git-Klons in Azure Synapse Analytics geladen haben, können Sie diese Aufgabe überspringen und mit dem Einrichten von Power BI fortfahren **.**
+   > **Hinweis**: Wenn Sie bereits Daten mithilfe eines Git-Klons in Azure Synapse Analytics geladen haben, können Sie diese Aufgabe überspringen und mit dem Einrichten von Power BI fortfahren. ****
 
-1. Melden Sie sich mit den Anmeldeinformationen auf der Registerkarte "Ressourcen" auf der rechten Seite des virtuellen Computers bei der [Azure-Portal](https://portal.azure.com) an.
-2. Verwenden Sie rechts neben der Suchleiste oben auf der Seite die Schaltfläche **[\>_]** , um eine neue Cloud Shell-Instanz im Azure-Portal zu erstellen. Wählen Sie eine ***Bash***-Umgebung aus, und erstellen Sie Speicher, falls Sie dazu aufgefordert werden. Die Cloud Shell bietet eine Befehlszeilenschnittstelle in einem Bereich am unteren Rand des Azure-Portal, wie hier gezeigt:
+1. Melden Sie sich mit den Anmeldeinformationen auf der Registerkarte Ressourcen auf der rechten Seite der VM beim [Azure-Portal](https://portal.azure.com) an.
+2. Verwenden Sie rechts neben der Suchleiste oben auf der Seite die Schaltfläche **[\>_]** , um eine neue Cloud Shell-Instanz im Azure-Portal zu erstellen. Wählen Sie eine ***PowerShell***-Umgebung aus, und erstellen Sie Speicher, falls Sie dazu aufgefordert werden. Die Cloud Shell bietet eine Befehlszeilenschnittstelle in einem Bereich am unteren Rand des Azure-Portals, wie hier gezeigt:
 
     ![Azure-Portal mit einem Cloud Shell-Bereich](../images/cloud-shell.png)
 
-    > **Hinweis**: Wenn Sie zuvor eine Cloudshell erstellt haben, die eine *Bash-Umgebung* verwendet, verwenden Sie das Dropdownmenü oben links im Bereich der Cloudshell, um sie in PowerShell*** zu ***ändern.
+    > **Hinweis**: Wenn Sie zuvor eine Cloudshell erstellt haben, die eine *Bash-Umgebung* verwendet, verwenden Sie das Dropdownmenü oben links im Bereich der Cloudshell, um sie in*** Power Shell ***zu ändern.
 
-3. Beachten Sie, dass Sie die Größe der Cloud Shell durch Ziehen der Trennzeichenleiste oben im Bereich ändern können, oder den Bereich mithilfe der Symbole **&#8212;** , **&#9723;** und **X** oben rechts minimieren, maximieren und schließen können. Weitere Informationen zur Verwendung von Azure Cloud Shell finden Sie in der [Azure Cloud Shell-Dokumentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+3. Beachten Sie, dass Sie die Größe der Cloud Shell durch Ziehen der Trennzeichenleiste oben im Bereich ändern können oder den Bereich mithilfe der Symbole **&#8212;**, **&#9723;** und **X** oben rechts minimieren, maximieren und schließen können. Weitere Informationen zur Verwendung von Azure Cloud Shell finden Sie in der [Azure Cloud Shell-Dokumentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 4. Geben Sie im Terminal die folgenden Befehle ein, um dieses Repository zu klonen:
 
@@ -42,7 +42,7 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
     git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst dp500
     ```
 
-5. Nachdem das Repository geklont wurde, geben Sie die folgenden Befehle ein, um in den Ordner für dieses Lab zu wechseln. Führen Sie das darin enthaltene Skript „setup.sh“ aus:
+5. Nachdem das Repository geklont wurde, geben Sie die folgenden Befehle ein, um in den **Setup**-Ordner zu wechseln und führen Sie das darin enthaltene Skript **setup.ps1** aus:
 
     ```
     cd dp500/Allfiles/04
@@ -51,7 +51,7 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
 
 6. Wenn Sie dazu aufgefordert werden, geben Sie ein geeignetes Kennwort ein, das für Ihren Azure Synapse SQL-Pool festgelegt werden soll.
 
-    > Merken Sie sich unbedingt das Kennwort.
+    > **Hinweis**: Merken Sie sich unbedingt das Kennwort!
 
 7. Warten Sie, bis das Skript abgeschlossen ist – dies dauert in der Regel etwa 20 Minuten; in einigen Fällen kann es jedoch länger dauern.
 
@@ -59,7 +59,7 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
 
 ### Klonen des Repositorys für diesen Kurs
 
-1. Öffnen Sie über das Startmenü die -Developer-Eingabeaufforderung.
+1. Öffnen Sie im Startmenü die Eingabeaufforderung
 
     ![](../images/command-prompt.png)
 
@@ -67,7 +67,7 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
 
     `d:` 
 
-   Drücken Sie die EINGABETASTE.
+   Drücken Sie die Eingabetaste.
 
     ![](../images/command-prompt-2.png)
 
@@ -82,31 +82,31 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
    
 3. Öffnen Sie das D-Laufwerk im Datei-Explorer, um sicherzustellen, dass die Dateien heruntergeladen wurden.
 
-### Öffnen Sie Power BI Desktop.
+### Öffnen Sie den Power BI Desktop
 
-In dieser Aufgabe legen Sie Optionen für Power BI Desktop fest.
+In dieser Aufgabe richten Sie den Power BI Desktop ein.
 
-1. Um Explorer zu öffnen, wählen Sie auf der Taskleiste die **verknüpfung Explorer** aus.
+1. Um den Datei-Explorer zu öffnen, wählen Sie auf der Taskleiste den Shortcut **File Explorer** aus.
 
-1. Navigieren Sie zum **Ordner "D:\DP500\Allfiles\05\Starter** ".
+1. Navigieren Sie zum Ordner **D:\DP500\Allfiles\05\Starter**.
 
-1. Um eine vordefinierte Power BI Desktop-Datei zu öffnen, doppelklicken Sie auf die **Sales Analysis - Create a dataflow.pbix** file.
+1. Um eine vordefinierte Power BI Desktop-Datei zu öffnen, doppelklicken Sie auf die Datei **Sales Analysis - Create a dataflow.pbix**.
 
-1. Wenn Sie noch nicht angemeldet sind, wählen Sie in der oberen rechten Ecke von Power BI Desktop die Option **"Anmelden"** aus. Verwenden Sie die Lab-Anmeldeinformationen, um den Anmeldevorgang abzuschließen.
+1. Wenn Sie noch nicht angemeldet sind, wählen Sie in der oberen rechten Ecke von Power BI Desktop die Option **Anmelden** aus. Verwenden Sie die Lab-Anmeldeinformationen, um den Anmeldevorgang abzuschließen.
 
     ![](../images/dp500-create-a-dataflow-image2.png)
 
-1. Um die Datei zu speichern, wählen Sie im **Menüband "Datei** " die Option **"Speichern unter**" aus.
+1. Um die Datei zu speichern, wählen Sie im Menüband **Datei** die Option **Speichern unter** aus.
 
 1. Navigieren Sie im Fenster **Speichern unter** zum Ordner **D:\PL300\MySolution**.
 
-1. Wechseln Sie zu Power BI Desktop, und wählen Sie "Datei" und dann "Optionen" und** dann ****"Optionen****" und unter "Authentifizierungsbrowser" die Option **"Mein Standardwebbrowser** verwenden" aus, und wählen Sie "Speichern" aus.****** ****
+1. Navigieren Sie zum Power BI Desktop und wählen **Datei** aus, dann **Optionen und Einstellungen** dann **Optionen** dann **Sicherheit** und unter Authentifizierung Überprüfung des Browsers **Meinen Standard-Web-Brower verwenden** und wählen Sie **Speichern** aus.
 
     *Sie aktualisieren die Power BI Desktop-Lösung so, dass ein Datenfluss verwendet wird, um Datumsdimensionsdaten zu erhalten.*
 
 ### Anmelden beim Power BI-Dienst
 
-Bei dieser Aufgabe melden Sie sich bei der Power BI-Dienst an, starten eine Testlizenz und erstellen einen Arbeitsbereich.
+Bei dieser Aufgabe melden Sie sich beim Power BI-Dienst an, starten eine Testlizenz und erstellen einen Arbeitsbereich.
 
 *Wichtig: Wenn Sie Power BI bereits in Ihrer VM-Umgebung eingerichtet haben, fahren Sie mit der nächsten Aufgabe fort.*
 
@@ -116,22 +116,22 @@ Bei dieser Aufgabe melden Sie sich bei der Power BI-Dienst an, starten eine Test
 
     *Wichtig: Sie müssen dieselben Anmeldeinformationen verwenden, die zum Anmelden von Power BI Desktop verwendet werden.*
 
-1. Wählen Sie oben rechts das Profilsymbol und dann " **Testversion starten"** aus.
+1. Wählen Sie oben rechts das Profilsymbol und dann **Testversion starten** aus.
 
     ![](../images/dp500-create-a-dataflow-image3.png)
 
-1. Wenn Sie dazu aufgefordert werden, wählen Sie **"Testversion starten"** aus.
+1. Wenn Sie dazu aufgefordert werden, wählen Sie **Testversion starten** aus.
 
 
-2. Führen Sie alle erneuten Aufgaben aus Standard, um die Testeinrichtung abzuschließen.
+2. Führen Sie alle verbleibenden Aufgaben aus, um die Testeinrichtung abzuschließen.
 
     *Tipp: Die Power BI-Webbrowserumgebung wird als **Power BI-Dienst** bezeichnet.*
 
-9. Wählen Sie unter Arbeitsbereiche die Option Arbeitsbereich erstellen aus.
+9. Wählen Sie Arbeitsbereiche und **Einen Arbeitsbereich erstellen**.
 
     ![](../images/dp500-create-a-star-schema-model-image2a.png)
 
-10. Erstellen Sie einen Arbeitsbereich mit dem Namen DP500 Labs, und wählen Sie "Speichern" aus****.
+10. Erstellen Sie einen Arbeitsbereich mit dem Namen DP500 Labs, und wählen Sie **Speichern**aus.
 
     *Hinweis: Der Arbeitsbereichsname muss innerhalb des Mandanten eindeutig sein. Wenn eine Fehlermeldung angezeigt wird, ändern Sie den Arbeitsbereichsnamen.*
 
@@ -145,15 +145,15 @@ In dieser Aufgabe starten Sie den SQL-Pool.
 
 1. Verwenden Sie die Lab-Anmeldeinformationen, um den Anmeldevorgang abzuschließen.
 
-1. Verwenden Sie die Suchleiste, um Azure Synapse Analytics zu finden. 
+1. Verwenden Sie die Suchleiste, um Azure Synapse Analytics zu suchen. 
 
-1. Azure Synapse Analytics-Instanz
+1. Wählen Sie die Azure Synapse Analytics-Instanz.
     ![](../images/synapse-instance.png)
 
 1. Suchen und wählen Sie den dedizierten SQL-Pool aus.
     ![](../images/dedicated-sql-pool.png)
 
-1. Anhalten oder Fortsetzen des dedizierten SQL-Pools.
+1. Fortsetzen des dedizierten SQL-Pools.
 
     ![](../images/resume-sql-pool.png)
 
@@ -163,31 +163,31 @@ In dieser Aufgabe starten Sie den SQL-Pool.
 
 In dieser Übung entwickeln Sie einen Datenfluss zur Unterstützung der Power BI-Modellentwicklung. Sie stellt eine konsistente Darstellung der Data Warehouse-Datumsdimensionstabelle bereit.
 
-### Überprüfen Sie das Datenmodell.
+### Überprüfen Sie das Datenmodell
 
 In dieser Aufgabe überprüfen Sie das in Power BI Desktop entwickelte Datenmodell.
 
 1. Wechseln Sie zur Power BI Desktop-Lösung.
 
-1. Wechseln Sie links zur **Modellansicht** .
+1. Wechseln Sie links zur **Modellansicht**.
 
     ![](../images/dp500-create-a-dataflow-image8.png)
 
-1. Beachten Sie im Modelldiagramm die **Tabelle "Datum** ".
+1. Beachten Sie im Modelldiagramm die Tabelle **Datum**.
 
     ![](../images/dp500-create-a-dataflow-image9.png)
 
-    *Die **Tabelle "Datum** " wurde vom Geschäftsanalysten erstellt. Sie stellt keine konsistente Definition von datumsbezogenen Daten dar und enthält keine hilfreichen Offsetspalten, um relative Datumsfilter zu unterstützen. In einer späteren Übung ersetzen Sie diese Tabelle durch eine neue Tabelle, die aus einem Datenfluss stammt.*
+    *Die Tabelle **Datum** wurde vom Geschäftsanalysten erstellt. Sie stellt keine konsistente Definition von datumsbezogenen Daten dar und enthält keine hilfreichen Offsetspalten, um relative Datumsfilter zu unterstützen. In einer späteren Übung ersetzen Sie diese Tabelle durch eine neue Tabelle, die aus einem Datenfluss stammt.*
 
 ### Erstellen eines Dataflows
 
 In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definition datumsbezogener Daten darstellt.
 
-1. Wählen Sie im Power BI-Dienst "**Neu", **"Datenfluss" aus****.
+1. Wählen Sie im Power BI-Dienst **Neu **;** Datenfluss** aus.
 
     ![](../images/dp500-create-a-dataflow-image10.png)
 
-1. Wählen Sie unter **Neue Tabellen definieren** die Option **Neue Tabellen hinzufügen**.
+1. Wählen Sie unter Titel **Neue Tabellen definieren** die Option **Neue Tabellen hinzufügen**.
 
     ![](../images/dp500-create-a-dataflow-image12.png)
 
@@ -199,9 +199,9 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
 
     *Tipp: Sie können das Suchfeld (oben rechts) verwenden, um die Datenquelle zu finden.*
 
-1. Geben Sie die Einstellungen für synapse Verbinden ion ein.
+1. Geben Sie die Einstellungen für die Synapse-Verbindung ein.
 
-     - Geben Sie den Servernamen aus dem Azure-Portal ein.
+     - Geben Sie den Servernamen aus dem Azure-Portal ein
      
      ![](../images/synapse-sql-pool-connection-string.png)
      
@@ -209,30 +209,30 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
       
       synapsewsxxxxx.sql.azuresynapse.net
       
-     - Wählen Sie Organisationskonto im Feld Authentifizierungsart aus. Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie die bereitgestellten Anmeldeinformationen des Labors.
+     - Sicherstellen, dass die Authentifizierung ein **Organisations-Konto** ist. Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie die bereitgestellten Anmeldeinformationen des Labors.
      ![](../images/synapse-sql-pool-sign-in.png)
 
-1. Wählen Sie unten rechts „Weiter“ aus.
+1. Unten rechts, wählen Sie **Weiter**aus.
 
     ![](../images/dp500-create-a-dataflow-image14.png)
 
-1. Erweitern Sie im Power Query-Navigationsbereich den Sqldw, und wählen Sie die **Tabelle "DimDate** " aus (nicht überprüfen).
+1. Erweitern Sie im Power Query-Navigationsbereich den Sqldw, und wählen Sie die Tabelle**DimDate** aus (nicht überprüfen).
 
     ![](../images/dp500-create-a-dataflow-image15.png)
 
 1. Beachten Sie die Vorschau von Tabellendaten.
 
-1. Um eine Abfrage zu erstellen, überprüfen Sie die **Tabelle "DimDate** ".
+1. Um eine Abfrage zu erstellen, überprüfen Sie die Tabelle **DimDate**.
 
     ![](../images/dp500-create-a-dataflow-image16.png)
 
-1. Wählen Sie unten rechts die Option "Daten** transformieren" aus**.
+1. Wählen Sie unten rechts **Transformieren von Daten**.
 
     ![](../images/dp500-create-a-dataflow-image17.png)
 
     *Power Query Online wird jetzt verwendet, um Transformationen auf die Tabelle anzuwenden. Es bietet eine nahezu identische Oberfläche mit dem Power Query-Editor in Power BI Desktop.*
 
-1. Ersetzen Sie zum Umbenennen der Abfrage im Bereich **Abfrageeinstellungen** (rechts) den Text im Feld **Name** durch **Salesperson**, und drücken Sie die **EINGABETASTE**.
+1. Im Bereich **Abfrageeinstellungen** (rechts) ersetzen Sie, um die Abfrage umzubenennen, im Feld **Name**, den Text mit **Datum**, und dann drücken Sie die **Eingabetaste**.
 
     ![](../images/dp500-create-a-dataflow-image18.png)
 
@@ -240,7 +240,7 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
 
     ![](../images/dp500-create-a-dataflow-image19.png)
 
-1. Deaktivieren Sie im **Fenster "Spalten** auswählen" das erste Kontrollkästchen, um alle Kontrollkästchen zu deaktivieren.
+1. Deaktivieren Sie im Fenster **Spalten auswählen** das erste Kontrollkästchen, um alle Kontrollkästchen zu deaktivieren.
 
     ![](../images/dp500-create-a-dataflow-image20.png)
 
@@ -264,33 +264,33 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
     ![](../images/dp500-create-a-dataflow-image22.png)
 
   
-1. **Beachten Sie im Bereich "Abfrage Einstellungen**", in der **Liste "Angewendete Schritte**", dass ein Schritt hinzugefügt wurde, um andere Spalten zu entfernen.
+1. Beachten Sie im Bereich **Abfrageeinstellungen** in der Liste **Angewendete Schritte**, dass ein Schritt zum Entfernen anderer Spalten hinzugefügt wurde.
 
     ![](../images/dp500-create-a-dataflow-image23.png)
 
-    *Power Query definiert Schritte, um die gewünschte Struktur und Daten zu erreichen. Jede Transformation ist ein Schritt in der Abfragelogik.*
+    *Power Query definiert Schritte, um die gewünschte Struktur und Daten zu erhalten. Jede Transformation ist ein Schritt in der Abfragelogik.*
 
-1. Um die **Spalte "FullDateAlternateKey** " umzubenennen, doppelklicken Sie auf die **Spaltenüberschrift "FullDateAlternateKey** ".
+1. Um die Spalte **FullDateAlternateKey** umzubenennen, doppelklicken Sie auf die Spaltenüberschrift **FullDateAlternateKey**.
 
-1. Ersetzen Sie den Text durch **EmployeeID**, und drücken Sie die **EINGABETASTE**.
+1. Ersetzen Sie den Text durch **Datum**, und drücken Sie die **Eingabetaste**.
 
     ![](../images/dp500-create-a-dataflow-image24.png)
 
-1. Klicken Sie zum Erstellen einer benutzerdefinierten Spalte auf der Registerkarte **Spalte hinzufügen** des Menübands in der Gruppe **Allgemein** auf **Benutzerdefinierte Spalte**.
+1. Um eine berechnete Spalte hinzuzufügen, klicken Sie auf der Registerkarte des Menübands **Spalte hinzufügen** in der Gruppe **Allgemein** auf **Benutzerdefinierte Spalte**.
 
     ![](../images/dp500-create-a-dataflow-image25.png)
 
    
 
-1. Ersetzen Sie im Fenster **Benutzerdefinierte Spalte** im Feld **Neuer Spaltenname** den Text durch **Cost**.
+1. Ersetzen Sie im Fenster **Benutzerdefinierte Spalte** im Feld **Neuer Spaltenname** den Text durch **Jahr**.
 
-1. Wählen Sie in der Dropdownliste **Datentyp** die Option **Suche** aus.
+1. Wählen Sie in der Dropdown-Liste **Datentyp** **Text**.
 
     ![](../images/dp500-create-a-dataflow-image26.png)
 
-1. Geben Sie für die **Benutzerdefinierte Spaltenformel** die folgenden Daten ein:
+1. Geben Sie in das Feld **Benutzerdefinierte Spaltenformel** die folgende Formel ein:
 
-    *Tipp: Alle Formeln stehen zum Kopieren und Einfügen aus der **Datei "D:\DP500\Allfiles\05\Assets\Snippets.txt**" zur Verfügung.*
+    *Tipp: Alle Formeln können Sie aus**D:\DP500\Allfiles\05\Assets\Snippets.txt** kopieren und einfügen.*
 
 
     ```
@@ -300,9 +300,9 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
 
 1. Wählen Sie **OK** aus.
 
-    *Jetzt fügen Sie vier weitere benutzerdefinierte Spalten hinzu.*
+    *Fügen Sie jetzt vier weitere benutzerdefinierte Spalten hinzu.*
 
-1. Fügen Sie eine weitere benutzerdefinierte Spalte namens **"Quartal** " mit dem **Datentyp "Text** " mit der folgenden Formel hinzu:
+1. Fügen Sie eine weitere benutzerdefinierte Spalte mit dem Namen **Quartal** und dem Datentyp **Text** unter Verwendung der folgenden Formel hinzu:
 
 
     ```
@@ -310,14 +310,14 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
     ```
 
 
-1. Fügen Sie eine weitere benutzerdefinierte Spalte namens **"Monat** " mit dem **Datentyp "Text** " mit der folgenden Formel hinzu:
+1. Fügen Sie eine weitere benutzerdefinierte Spalte mit dem Namen **Monat** und dem Datentyp **Text** unter Verwendung der folgenden Formel hinzu:
 
 
     ```
     Date.ToText([Date], "yyyy-MM")
     ```
 
-1. Fügen Sie eine weitere benutzerdefinierte Spalte namens **"Month Offset**" hinzu (ein Leerzeichen zwischen den Wörtern) mit dem **Datentyp "Wer le number**" mit der folgenden Formel:
+1. Fügen Sie eine weitere benutzerdefinierte Spalte mit dem Namen **Monats Offset** (mit einem Leerzeichen zwischen den Wörtern) und dem Datentyp **Ganze Zahl** unter Verwendung der folgenden Formel hinzu:
 
 
     ```
@@ -325,11 +325,11 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
     ```
 
 
-    *Mit dieser Formel wird die Anzahl der Monate aus dem aktuellen Monat bestimmt. Der aktuelle Monat ist Null, die letzten Monate sind negativ, und die zukünftigen Monate sind positiv. Beispielsweise hat der letzte Monat den Wert -1.*
+    *Diese Formel bestimmt die Anzahl der Monate ab dem aktuellen Monat. Der aktuelle Monat ist Null, die vergangenen Monate sind negativ und die zukünftigen Monate sind positiv. Zum Beispiel hat der letzte Monat den Wert -1.*
 
    
 
-1. Fügen Sie eine weitere benutzerdefinierte Spalte namens **"Monatsoffsetfilter** " (Leerzeichen zwischen den Wörtern) mit dem **Datentyp "Text** " hinzu, indem Sie die folgende Formel verwenden:
+1. Fügen Sie eine weitere benutzerdefinierte Spalte mit dem Namen **Monats Offset Filter** (mit Leerzeichen zwischen den Wörtern) mit dem Datentyp **Text** unter Verwendung der folgenden Formel hinzu:
 
 
     ```
@@ -341,15 +341,15 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
     ```
 
 
-    *Mit dieser Formel wird der numerische Offset in ein benutzerfreundliches Textformat transponiert.*
+    *Diese Formel wandelt den numerischen Offset in ein benutzerfreundliches Textformat um.*
 
-    *Tipp: Alle Formeln stehen zum Kopieren und Einfügen aus der **Datei "D:\DP500\Allfiles\05\Assets\Snippets.txt**" zur Verfügung.*
+    *Tipp: Alle Formeln können Sie aus**D:\DP500\Allfiles\05\Assets\Snippets.txt** kopieren und einfügen.*
 
-1. Klicken Sie auf der Registerkarte **Start** des Menübands in der Gruppe **Spalten verwalten** auf das Symbol **Spalten auswählen**, um Spalten zu entfernen.
+1. Wählen Sie auf der Registerkarte des Menübands **Startseite** in der Gruppe **Spalten verwalten** das Symbol **Spalten auswählen**, um nicht benötigte Spalten zu entfernen.
 
     ![](../images/dp500-create-a-dataflow-image27.png)
 
-1. Deaktivieren Sie im **Fenster "Spalten** auswählen" die folgenden Spalten:
+1. Deaktivieren Sie im Fenster **Spalten auswählen** die folgenden Spalten:
 
     - MonthNumberOfYear
 
@@ -361,74 +361,74 @@ In dieser Aufgabe erstellen Sie einen Datenfluss, der eine konsistente Definitio
 
 1. Wählen Sie **OK** aus.
 
-1. Klicken Sie auf "Speichern und schließen" unten rechts.
+1. Wählen Sie unten rechts **Speichern &amp;Schließen**.
 
     ![](../images/dp500-create-a-dataflow-image29.png)
 
-1. **Geben **Sie im Fenster "Datenfluss** speichern" im Feld "Name **" das **Firmendatum** ein.
+1. Geben Sie im Fenster **Speichern Sie Ihren Datenfluss** in das Feld **Name** **Unternehmensdatum** ein.
 
-1. Geben Sie im **Feld "Beschreibung** " folgendes ein: **Einheitliche Datumsdefinition für die Verwendung in allen Adventure Works-Datasets**
+1. Geben Sie in das Feld **Beschreibung** ein: **Konsistente Datumsdefinition, die in allen Adventure Works-Datensätzen verwendet werden soll**.
 
-1. Tipp: Die Beschreibung steht zum Kopieren und Einfügen aus der **Datei "D:\DP500\Allfiles\05\Assets\Snippets.txt**" zur Verfügung.
+1. Tipp: Die Beschreibung können Sie aus **D:\DP500\Allfiles\05\Assets\Snippets.txt** kopieren und einfügen.
 
     ![](../images/dp500-create-a-dataflow-image30.png)
 
-1. Klicken Sie auf **Speichern**.
+1. Wählen Sie **Speichern**.
 
     ![](../images/dp500-create-a-dataflow-image31.png)
 
-1. Erweitern Sie im Power BI-Dienst im linken Navigationsbereich **Mein Arbeitsbereich**.
+1. Wählen Sie im Power BI-Dienst im Bereich **Navigation** den Namen Ihres Arbeitsbereichs.
 
     *Diese Aktion öffnet die Startseite für den Arbeitsbereich.*
 
-1. Um den Datenfluss zu aktualisieren, zeigen Sie mit dem Mauszeiger auf den Datenfluss des **Unternehmensdatums** , und wählen Sie dann das **Symbol "Jetzt** aktualisieren" aus.
+1. Um den Datenfluss zu aktualisieren, bewegen Sie den Cursor auf den Datenfluss **Unternehmensdatum** und wählen Sie das Symbol **Jetzt aktualisieren**.
 
     ![](../images/dp500-create-a-dataflow-image32.png)
 
   
 
-1. Um zu den Datenflusseinstellungen zu wechseln, zeigen Sie mit dem Mauszeiger auf den **Datenfluss des Unternehmensdatums**, wählen Sie die Auslassungspunkte aus, und wählen Sie **dann Einstellungen** aus.
+1. Um zu den Datafloweinstellungen zu gelangen, bewegen Sie den Cursor auf den Datenfluss **Unternehmensdatum**, wählen die Auslassungspunkte aus und wählen dann **Einstellungen**.
 
     ![](../images/dp500-create-a-dataflow-image33.png)
 
-1. Überprüfen Sie die Konfigurationsoptionen.
+1. Beachten Sie die Konfigurationsoptionen.
 
     ![](../images/dp500-create-a-dataflow-image34.png)
 
-    *Es gibt zwei Einstellungen, die konfiguriert werden sollten. Zuerst sollte die geplante Aktualisierung so konfiguriert werden, dass die Datenflussdaten täglich aktualisiert werden. Auf diese Weise werden die Monatsversatzungen mit dem aktuellen Datum berechnet. Zweitens sollte der Datenfluss als zertifiziert (von einem autorisierten Prüfer) unterstützt werden. Ein zertifizierter Dataflow erklärt anderen, dass er Qualitätsstandards erfüllt und als zuverlässig und autoritativ angesehen werden kann.*
+    *Es gibt zwei Einstellungen, die konfiguriert werden müssen. Erstens sollte die geplante Aktualisierung so konfiguriert werden, dass die Dataflowdaten täglich aktualisiert werden. Auf diese Weise werden die monatlichen Offsets anhand des aktuellen Datums berechnet. Zweitens sollte der Datenfluss als zertifiziert (von einem autorisierten Prüfer) bestätigt werden. Ein zertifizierter Datenfluss erklärt gegenüber anderen, dass er Qualitätsstandards erfüllt und als zuverlässig und verbindlich angesehen werden kann.*
 
-    *Zusätzlich zum Konfigurieren von Einstellungen sollte allen Inhaltserstellern die Berechtigung erteilt werden, den Datenfluss zu nutzen.*
+    *Zusätzlich zur Konfiguration der Einstellungen sollte allen Inhaltserstellenden die Erlaubnis erteilt werden, den Datenfluss zu nutzen.*.
 
 ## Nutzen eines Dataflows
 
-In dieser Übung ersetzen Sie in der Power BI Desktop-Lösung die vorhandene **Datumstabelle** durch eine neue Tabelle, in der die Daten aus dem Datenfluss stammen.
+In dieser Übung ersetzen Sie in der Power BI Desktop-Lösung die bestehende Tabelle **Datum** durch eine neue Tabelle, die ihre Daten aus dem Datenfluss bezieht.
 
 ### Entfernen der ursprünglichen Datumstabelle
 
-In dieser Aufgabe erstellen Sie die Tabelle **Date**.
+In dieser Aufgabe entfernen Sie die ursprüngliche Tabelle **Datum**.
 
 1. Wechseln Sie zur Power BI Desktop-Lösung.
 
-1. Klicken Sie im Modelldiagramm mit der rechten Maustaste auf die **Tabelle "Datum** ", und wählen Sie **dann "Aus Modell** löschen" aus.
+1. Klicken Sie im Modelldiagramm mit der rechten Maustaste auf die Tabelle **Datum** und wählen Sie dann **Aus Modell löschen**.
 
     ![](../images/dp500-create-a-dataflow-image35.png)
 
-1. Wenn Sie aufgefordert werden, die Seite zu löschen, wählen Sie **Löschen** aus.
+1. Wenn Sie aufgefordert werden, die Tabelle zu löschen, wählen Sie **OK**.
 
     ![](../images/dp500-create-a-dataflow-image36.png)
 
   
 
 
-### Fügen Sie eine neue Routingtabelle hinzu.
+### Fügen Sie eine neue Datumstabelle hinzu
 
-In dieser Aufgabe fügen Sie eine neue **Datumstabelle** hinzu, die die zugehörigen Daten aus dem Datenfluss angibt.
+In dieser Aufgabe fügen Sie eine neue **Datums-** tabelle hinzu, die die zugehörigen Daten aus dem Datenfluss angibt.
 
-1. Wählen Sie auf der Registerkarte **Start** des Menübands in der Gruppe **Daten** die Option **SQL Server** aus.
+1. Auf dem Menüband **Startseite** wählen Sie aus der Gruppe **Daten** das Symbol **Abrufen von Daten** aus.
 
     ![](../images/dp500-create-a-dataflow-image37.png)
 
-1. Wählen Sie im **Fenster "Daten** abrufen" links Power Platform** und dann **Power BI-Datenflüsse**** aus.
+1. Im Fenster **Abrufen von Daten**, links, wählen Sie **Power Platform** aus und dann wählen Sie **Power BI Datenflüsse** aus.
 
     ![](../images/dp500-create-a-dataflow-image38.png)
 
@@ -438,7 +438,7 @@ In dieser Aufgabe fügen Sie eine neue **Datumstabelle** hinzu, die die zugehör
 
   
 
-1. Wählen Sie im **Power BI-Datenflussfenster** " **Anmelden"** aus.
+1. Wählen Sie im Fenster **Power BI Datenflüsse** **Anmelden** aus.
 
     ![](../images/dp500-create-a-dataflow-image40.png)
 
@@ -450,12 +450,12 @@ In dieser Aufgabe fügen Sie eine neue **Datumstabelle** hinzu, die die zugehör
 
     ![](../images/dp500-create-a-dataflow-image41.png)
 
-1. Erweitern Sie im **Navigator-Fenster** im linken Bereich Ihren Arbeitsbereichsordner, und erweitern Sie dann den **Datenflussordner "Unternehmensdatum** ".
+1. Erweitern Sie im Fenster **Navigator** im linken Bereich Ihren Arbeitsbereichsordner, und erweitern Sie dann den Datenflussordner **Unternehmensdatum**.
 
     ![](../images/dp500-create-a-dataflow-image42.png)
 
 
-1. Markieren der „Date“-Tabelle
+1. Prüfen Sie die **Datums** tabelle.
 
     ![](../images/dp500-create-a-dataflow-image43.png)
 
@@ -465,7 +465,7 @@ In dieser Aufgabe fügen Sie eine neue **Datumstabelle** hinzu, die die zugehör
 
     *Es ist möglich, die Daten mithilfe der Power Query-Editor zu transformieren.*
 
-1. Erstellen Sie in der Modellansicht eine Beziehung, indem Sie die Spalte **Date** der Tabelle **Date** auf die Spalte **OrderDate** der Tabelle **Sales** ziehen.
+1. Wenn die neue Tabelle dem Modell hinzugefügt wird, erstellen Sie eine Beziehung durch Ziehen der Spalte **DateKey** aus der**Daten**tabellen zur Spalte **OrderDateKey** der Tabelle **Vertrieb**.
 
     ![](../images/dp500-create-a-dataflow-image45.png)
 
@@ -475,34 +475,34 @@ In dieser Aufgabe fügen Sie eine neue **Datumstabelle** hinzu, die die zugehör
 
 In dieser Aufgabe testen Sie das Modell, indem Sie ein einfaches Berichtslayout erstellen.
 
-1. Wechseln Sie links zur **Berichtsansicht** .
+1. Wechseln Sie links zur Ansicht **Bericht**.
 
     ![](../images/dp500-create-a-dataflow-image46.png)
 
-1. Klicken Sie im Bereich Visualisierungen auf den Visualtyp Gestapeltes Balkendiagramm, um der Seite ein Diagramm hinzuzufügen.
+1. Um der Seite ein Diagramm im Bereich **Visualisierungen** hinzuzufügen, wählen Sie das gestapelte Balkendiagramm.
 
     ![](../images/dp500-create-a-dataflow-image47.png)
 
-1. Ändern Sie die Größe des Matrixvisuals so, dass es die gesamte Seite einnimmt.
+1. Ändern Sie die Größe des Diagramms so, dass es die Bereichtsseite einnimmt.
 
   
 
-1. Erweitern Sie im Datenbereich** die **Tabelle "Datum**", und ziehen Sie dann das **Feld "Monatsoffsetfilter**" in das **visuelle Balkendiagramm.
+1. Im Bereich **Daten** erweitern Sie die **Daten** tabelle und dann ziehen Sie das **Month Offset Filter** Feld in das Balkendiagramm.
 
     ![](../images/dp500-create-a-dataflow-image48.png)
 
-1. Erweitern Sie im **Bereich "Daten** " die **Tabelle "Sales** ", und ziehen Sie dann das **Feld "Umsatzbetrag** " in das visuelle Balkendiagramm.
+1. Erweitern Sie im Bereich **Daten** die Tabelle **Vertrieb**, und ziehen Sie dann das Feld **Umsatzbetrag** in das visuelle Balkendiagramm.
 
     ![](../images/dp500-create-a-dataflow-image49.png)
 
 
-1. Um die vertikale Achse zu sortieren, wählen Sie oben rechts im visuellen Element die Auslassungspunkte aus, und wählen Sie dann den Abstandsfilter für **die Sortierachse**** > des Monats aus.**
+1. To sort the vertical axis, oben rechts vom Diagramm, wählen Sie die Auslassungspunkte, und wählen Sie dann **Achse sortieren** > **Month Offset Filter** aus.
 
     ![](../images/dp500-create-a-dataflow-image50.png)
 
-1. Um sicherzustellen, dass die Werte des Monatsoffsetfilters chronologisch sortiert werden, wählen Sie im **Datenbereich** das Feld " **Monatsoffsetfilter** " aus.
+1. Um den Monat offset zu sichern, sind die Werte chronologisch sortiert in der Bereich **Daten**, wählen Sie das **Month Offset Filter** Feld aus.
 
-1. Klicken Sie auf dem kontextbezogenen Menüband **Spaltentools** innerhalb der Gruppe **Sortieren** auf **Nach Spalte sortieren**, und wählen Sie dann **MonthKey** aus.
+1. Auf dem Menüband **Column Tools** wählen Sie aus der Gruppe **Sortieren** **Sortieren**, und wählen Sie dann **Month Offset** aus.
 
     ![](../images/dp500-create-a-dataflow-image51.png)
 
@@ -516,10 +516,10 @@ In dieser Aufgabe testen Sie das Modell, indem Sie ein einfaches Berichtslayout 
 
 ### Anhalten des SQL-Pools
 
-In dieser Aufgabe beenden Sie den SQL-Pool.
+In dieser Aufgabe halten Sie den SQL-Pool an.
 
 1. Rufen Sie in einem Webbrowser [https://portal.azure.com](https://portal.azure.com/) auf.
 
-1. Erstellen Sie den SQL-Pool.
+1. Suchen Sie den SQL-Pool.
 
 1. Anhalten des SQL-Pools.

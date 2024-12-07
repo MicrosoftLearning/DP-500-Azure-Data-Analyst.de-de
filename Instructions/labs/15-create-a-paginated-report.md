@@ -1,10 +1,10 @@
 # Erstellen eines paginierten Berichts
 
-## Überblick
+## Übersicht
 
 **Die geschätzte Dauer dieses Labs beträgt 45 Minuten.**
 
-In diesem Lab verwenden Sie Power BI Report Builder, um ein bis ins kleinste Detail perfektes, paginiertes Berichtslayout zu entwickeln, das seine Daten aus der SQL Server-Datenbank **AdventureWorksDW2020** als Quelle abruft. Sie erstellen eine Datenquelle und ein Dataset und konfigurieren außerdem einen Berichtsparameter. Mithilfe des Berichtslayouts können Daten auf mehreren Seiten gerendert sowie in PDF und andere Formate exportiert werden.
+In diesem Lab verwenden Sie Power BI Report Builder, um ein bis ins kleinste Detail perfektes, paginiertes Berichtslayout zu entwickeln, das seine Daten aus der SQL Server-Datenbank **AdventureWorksDW2020** als Quelle abruft. Sie erstellen dann eine Datenquelle und ein Dataset und konfigurieren außerdem einen Berichtsparameter. Mithilfe des Berichtslayouts können Daten auf mehreren Seiten gerendert sowie in PDF und andere Formate exportiert werden.
 
 Der fertige Bericht wird wie folgt aussehen:
 
@@ -30,7 +30,7 @@ In dieser Übung öffnen Sie Power BI Report Builder, um einen Bericht zu ers
 
 ### Klonen des Repositorys für diesen Kurs
 
-1. Öffnen Sie über das Startmenü die -Developer-Eingabeaufforderung.
+1. Öffnen Sie im Startmenü die Eingabeaufforderung
 
     ![](../images/command-prompt.png)
 
@@ -38,7 +38,7 @@ In dieser Übung öffnen Sie Power BI Report Builder, um einen Bericht zu ers
 
     `d:` 
 
-   Drücken Sie die EINGABETASTE.
+   Drücken Sie die Eingabetaste.
 
     ![](../images/command-prompt-2.png)
 
@@ -53,20 +53,20 @@ In dieser Übung öffnen Sie Power BI Report Builder, um einen Bericht zu ers
 
 ### Erstellen des Berichts
 
-In dieser Aufgabe öffnen Sie Power BI Report Builder, um einen Bericht zu erstellen und diesen dann zu speichern.
+In dieser Aufgabe öffnen Sie Power BI Report Builder, um einen Bericht zu erstellen und anschließend zu speichern.
 
-1. Um Power BI Report Builder zu öffnen, klicken Sie auf der Taskleiste auf die Verknüpfung **Power BI Report Builder**.
+1. Um Power BI Report Builder zu öffnen, klicken Sie auf der Taskleiste auf den Shortcut **Power BI Report Builder**.
 
     ![](../images/dp500-create-a-paginated-report-image2.png)
 
-1. Wenn Sie aufgefordert werden, auf die neueste Version des Power BI-Berichts-Generators zu aktualisieren, wählen Sie **"Abbrechen" aus**.
+1. Wenn Sie aufgefordert werden, auf die neueste Version von Power BI Report Builder zu aktualisieren, wählen Sie **Abbrechen** aus.
 
-2. Klicken Sie zum Erstellen eines neuen Berichts im Power BI Report Builder-Fenster im Fenster **Erste Schritte** auf **Leerer Bericht**.
+2. Um einen neuen Bericht zu erstellen, wählen Sie im Power BI Report Builder-Fenster im Fenster **Einstieg** die Option **Leerer Bericht** aus.
 
     ![](../images/dp500-create-a-paginated-report-image3.png)
 
   
-3. Um den Bericht zu speichern, klicken Sie auf die Registerkarte **Datei** (in der linken oberen Ecke), und wählen Sie dann **Speichern** aus.
+3. Um den Bericht zu speichern, wählen Sie die Registerkarte **Datei** (oben links) und wählen Sie dann **Speichern** aus.
 
     ![](../images/dp500-create-a-paginated-report-image4.png)
 
@@ -74,7 +74,7 @@ In dieser Aufgabe öffnen Sie Power BI Report Builder, um einen Bericht zu er
 
 5. Geben Sie in das Feld **Name** den Namen **Sales Order Report** (Verkaufsauftragsbericht) ein.
 
-6. Klicken Sie auf **Speichern**.
+6. Wählen Sie **Speichern**.
 
 ## Entwerfen Sie das Berichtslayout.
 
@@ -88,68 +88,68 @@ In dieser Aufgabe konfigurieren Sie die Berichtskopfzeile.
 
     ![](../images/dp500-create-a-paginated-report-image5.png)
 
-    Der Textbereich enthält ein einzelnes Textfeld, das für einen Berichtstitel bereit ist, und die Berichtsfußzeile enthält ein einzelnes Textfeld, in dem die Ausführungszeit des Berichts beschrieben ist.
+    *Der Textkörper enthält ein einzelnes Textfeld für einen Berichtstitel, und die Fußzeile des Berichts enthält ein einzelnes Textfeld, das die Ausführungszeit des Berichts beschreibt.*
 
-    *Der Standardentwurf rendert den Berichtstitel einmal im Textkörper auf der ersten gerenderten Seite. Sie ändern nun jedoch den Berichtsentwurf, indem Sie einen Berichtskopfbereich hinzufügen und das Textfeld für den Berichtstitel in diesen Bereich verschieben. Auf diese Weise wird der Berichtstitel auf jeder Seite wiederholt. Außerdem fügen Sie ein Bild des Firmenlogos hinzu.*
+    *Der Standardentwurf rendert den Berichtstitel einmal, im Textkörper, auf der ersten gerenderten Seite. Sie werden nun jedoch den Berichtsentwurf ändern, indem Sie einen Berichtskopfbereich hinzufügen und das Textfeld für den Berichtstitel in diesen Bereich verschieben. Auf diese Weise wird der Berichtstitel auf jeder Seite wiederholt. Außerdem fügen Sie ein Bild des Firmenlogos ein.*
 
-2. Um einen Berichtskopfzeilen-Bereich hinzuzufügen, klicken Sie im Menüband auf der Registerkarte **Einfügen** in der Gruppe **Kopf- &amp; Fußzeile** auf **Kopfzeile**, und wählen Sie dann **Kopfzeile hinzufügen** aus.
+2. Um einen Berichtskopfbereich hinzuzufügen, öffnen Sie auf der Registerkarte des Menübands **Einfügen** in der Gruppe **Kopfzeile &amp;Fußzeile** die Option **Kopfzeile** und wählen dann **Kopfzeile hinzufügen**.
 
     ![](../images/dp500-create-a-paginated-report-image6.png)
 
 3. Beachten Sie im Berichts-Designer, dass ein dem Berichtslayout ein Berichtskopfzeilen-Bereich hinzugefügt wurde.
 
-4. Um das Textbereichs-Textfeld auszuwählen, klicken Sie auf das Textfeld „Zum Hinzufügen eines Titels klicken“.
+4. Um das Textfeld für den Textkörper auszuwählen, wählen Sie das Textfeld "Klicken, um einen Titel hinzuzufügen".
 
-5. Um das Textfeld zu verschieben, klicken Sie auf das Symbol mit den vier Pfeilspitzen und ziehen es in den Kopfzeilenbereich, wo Sie es dann in der oberen linken Ecke des Berichtskopfzeilen-Bereichs ablegen.
+5. Um das Textfeld zu verschieben, wählen Sie das Symbol mit dem vierköpfigen Pfeil und ziehen es in den Kopfzeilenbereich, um es dann ganz oben links im Kopfzeilenbereich des Berichts abzulegen.
 
     ![](../images/dp500-create-a-paginated-report-image7.png)
 
-6. Um den Text im Berichtstitel-Textfeld zu ändern, klicken Sie in das Textfeld, und geben Sie dann Folgendes ein:
+6. Um den Text im Textfeld für den Berichtstitel zu ändern, wählen Sie das Textfeld und geben Sie es ein: **Auftragsbericht**
 
-    *Um die Größe des Textfelds zu ändern, öffnen Sie zuerst den **Eigenschaftenbereich** . Für eine differenzierte Steuerung von Standort- und Größeneigenschaften benötigen Sie den **Eigenschaftenbereich** .*
+    *Um die Größe des Textfeldes zu ändern, öffnen Sie zunächst den Bereich **Eigenschaften**. Für eine differenzierte Steuerung der Eigenschaften von Position und Größe müssen Sie den Bereich **Eigenschaften** verwenden.*
 
-7. Überprüfen Sie im Menüband auf der Registerkarte **Ansicht** in der Gruppe **Ein-/Ausblenden** die **Eigenschaften**.
+7. Wählen Sie auf der Registerkarte des Menübands **Ansicht** innerhalb der Gruppe **Einblenden/Ausblenden** die Option **Eigenschaften** aus.
 
     ![](../images/dp500-create-a-paginated-report-image8.png)
 
-8. Um das Berichtstitel-Textfeld auszuwählen, klicken Sie zuerst in einen Bereich außerhalb des Textfelds, und dann klicken Sie erneut in das Textfeld.
+8. Um den Fokus auf das Textfeld für den Berichtstitel zu legen, wählen Sie zunächst einen Bereich außerhalb des Textfelds und wählen dann das Textfeld erneut aus.
 
-    Das Textfeld ist ausgewählt, wenn der Rahmen des Textfelds hervorgehoben angezeigt wird und am Rahmen Größenziehpunkte (kleine Kreise) angezeigt werden.
+    *Das Textfeld ist ausgewählt, wenn der Rand des Textfeldes hervorgehoben ist und die Griffe zur Größenänderung (kleine Kreise) am Rand erscheinen.*
 
 9. Scrollen Sie im Bereich **Eigenschaften** (rechts) in der Liste nach unten, um die Gruppe **Position** zu suchen.
 
     ![](../images/dp500-create-a-paginated-report-image9.png)
 
-    In der Gruppe Position können Sie exakte Werte für die Position und Größe von Berichtselementen festlegen.
+    *Die Gruppe **Position** ermöglicht es, genaue Werte für die Position und Größe von Berichtselementen festzulegen.*
 
-    Ein bis ins kleinste Detail perfektes Layout ist erforderlich, um das Seitenrendering am Ende des Labs zu erzielen.
+    *Wichtig: Geben Sie die Werte wie in diesem Lab angegeben ein. Ein pixelgenaues Layout ist erforderlich, um die Seite am Ende des Labs darstellen zu können.*
 
 10. Erweitern Sie in der Gruppe **Position** die Gruppe **Ort**, und stellen Sie sicher, dass die Eigenschaften **Links** und **Oben** jeweils auf **0in** (0cm) festgelegt sind.
 
-    Die Einheiten für Ort und Größe sin in Zoll angegeben, weil die regionalen Einstellungen des virtuellen Lab-Computers auf „USA“ festgelegt sind.
+    *Die Orts- und Größeneinheiten sind in Zoll angegeben, da die regionalen Einstellungen der virtuellen Maschine des Labs auf die Vereinigten Staaten eingestellt sind. Wenn in Ihrer Region metrische Maße verwendet werden, wären Zentimeter die Standardeinheit.*
 
 11. Erweitern Sie in der Gruppe **Position** die Gruppe **Größe**, und legen Sie die Eigenschaft **Breite** auf **4** fest.
 
     ![](../images/dp500-create-a-paginated-report-image10.png)
 
 
-12. Um ein Bild einzufügen, klicken Sie im Menüband auf der Registerkarte **Einfügen** in der Gruppe **Berichtselemente** auf **Bild**.
+12. Um ein Bild einzufügen, wählen Sie auf der Registerkarte des Menübands **Einfügen** in der Gruppe **Berichtelemente** die Option **Bild**.
 
     ![](../images/dp500-create-a-paginated-report-image11.png)
 
-13. Um das Bild dem Berichtsentwurf hinzuzufügen, klicken Sie rechts neben dem Berichtstitel-Textfeld in den Berichtskopfzeilen-Bereich.
+13. Um das Bild dem Berichtsentwurf hinzuzufügen, wählen Sie den Bereich innerhalb des Berichtskopfbereichs rechts neben dem Textfeld für den Berichtstitel aus.
 
-14. Klicken Sie zum Importieren aus einer Bilddatei im Fenster **Bildeigenschaften** auf **Importieren**.
+14. Um aus einer Bilddatei zu importieren, wählen Sie im Fenster **Bildeigenschaften** die Option **Importieren**.
 
     ![](../images/dp500-create-a-paginated-report-image12.png)
 
-15. Navigieren Sie im Fenster **Öffnen** zum Ordner **D:\DA100\Data**, und wählen Sie die Datei **AdventureWorksLogo.jpg** aus.
+15. Navigieren Sie im Fenster **Öffnen** zum Ordner **D:\DP500\Allfiles\15\Assets**, und wählen Sie dann die Datei **AdventureWorksLogo.jpg** aus.
 
-16. Klicken Sie auf **Öffnen**.
+16. Wählen Sie **Öffnen** aus.
 
-17. Klicken Sie im Fenster **Bildeigenschaften** auf **OK**.
+17. Wählen Sie im Fenster **Bildeigenschaften** **OK** aus.
 
-18. Beachten Sie im Berichts-Designer, dass das Bild hinzugefügt wurde und ausgewählt ist.
+18. Im Berichtsdesigner können Sie sehen, dass das Bild hinzugefügt wurde und im Fokus ist.
 
  
 
@@ -157,68 +157,68 @@ In dieser Aufgabe konfigurieren Sie die Berichtskopfzeile.
 
     |  **Eigenschaft** | **Wert** |
     |--- | --- |
-    |  Position  Ort  Links| 5 |
-    |  Position  Ort  Oben| 0 |
-    |  Position  Größe  Breite| 1 |
-    |  Position  Größe  Höhe| 1 |
+    |  Position > Ort > Links| 5 |
+    |  Position > Ort > Oben| 0 |
+    |  Position > Größe > Breite| 1 |
+    |  Position > Größe > Höhe| 1 |
 
 
 
-20. Um die Größe des Berichtskopfzeilen-Bereichs zu ändern, wählen Sie den Bereich zuerst aus, indem Sie auf eine leere Fläche des Bereichs klicken.
+20. Um die Größe des Berichtskopfzeilenbereichs zu ändern, setzen Sie zunächst den Fokus auf den Bereich, indem Sie einen leeren Bereich darin auswählen.
 
-21. Legen Sie im Bereich **Eigenschaften** die Eigenschaft **Allgemein | Höhe** > ** auf **1 fest.
+21. Setzen Sie im Bereich **Eigenschaften** die Eigenschaft **Allgemein** > **Höhe** auf **1**.
 
 22. Überprüfen Sie, ob der Berichtskopfzeilen-Bereich ein einzelnes Textfeld und Bild enthält, und dass es wie folgt aussieht:
 
     ![](../images/dp500-create-a-paginated-report-image13.png)
 
-23. Um den Bericht zu speichern, klicken Sie auf der Registerkarte **Datei** auf **Speichern**.
+23. Um den Bericht zu speichern, wählen Sie auf der Registerkarte **Datei** **Speichern** aus.
 
-    Sie können auch oben links auf das Datenträgersymbol klicken.
+    *Tipp: Sie können auch das Datenträgersymbol oben links auswählen.*
 
     ![](../images/dp500-create-a-paginated-report-image14.png)
 
-    Sie sind jetzt bereit, um den Bericht für das Abrufen des Ergebnisses einer Datenbankabfrage zu konfigurieren.
+    *Sie sind jetzt bereit, den Bericht so zu konfigurieren, dass er das Ergebnis einer Datenbankabfrage abruft.*
 
 
 ### Abrufen von Daten
 
-In dieser Aufgabe erstellen Sie eine Datenquelle und ein Dataset, um ein Abfrageergebnis aus der SQL Server-Datenbank **AdventureWorksDW2020** abzurufen.
+In dieser Aufgabe werden Sie eine Datenquelle und ein Dataset erstellen, um ein Abfrageergebnis aus der **AdventureWorksDW2022-DP500** SQL Server-Datenbank abzurufen.
 
 1. Klicken Sie im Bereich **Berichtsdaten** (links zu finden) mit der rechten Maustaste auf den Ordner **Datenquellen**, und wählen Sie dann **Datenquelle hinzufügen** aus.
 
     ![](../images/dp500-create-a-paginated-report-image15.png)
 
-    Es ist möglich, Daten aus cloudbasierten oder lokalen Datenbanken oder einem Power BI-Dataset abzurufen.
+     *Es ist möglich, Daten aus Cloud- oder On-Premises-Datenbanken oder aus einem Power BI-Datensatz abzurufen.*
 
-2. Ersetzen Sie im Fenster **Datenquelleneigenschaften** im Feld **Name** den Text durch **AdventureWorksDW2020**.
+2. Ersetzen Sie im Fenster **Eigenschaften der Datenquelle** im Feld **Name** den Text durch **AdventureWorksDW2022**.
 
 3. Vergewissern Sie sich, dass in der Dropdownliste **Verbindungstyp auswählen** die Option **Microsoft SQL Server** ausgewählt ist.
 
-4. Klicken Sie zum Erstellen der Verbindungszeichenfolge auf **Erstellen**.
+4. Um die Verbindungszeichenfolge zu erstellen, wählen Sie **Erstellen** aus.
 
     ![](../images/dp500-create-a-paginated-report-image16.png)
 
 
 5. Geben Sie im Fenster **Verbindungseigenschaften** im Feld **Servername** den Wert **localhost** ein.
 
-    *Hinweis: In diesem Lab stellen Sie mithilfe von **localhost** eine Verbindung mit der SQL Server-Datenbank her, da Gatewaydatenquellen **localhost** nicht auflösen können. Dies wird nicht als Vorgehensweise beim Erstellen eigener Lösungen empfohlen.*
+    *In diesem Lab werden Sie sich mithilfe von **localhost** mit der SQL Server-Datenbank verbinden. Dies ist jedoch keine empfohlene Praxis, wenn Sie Ihre eigenen Lösungen erstellen, da Gateway-Datenquellen **localhost** nicht auflösen können.*
 
-6. Wählen Sie in der Dropdownliste **Datenbanknamen auswählen oder eingeben** den Eintrag **AdventureWorksDW2020** aus.
+6. Wählen Sie in der Dropdown-Liste **Datenbanknamen auswählen oder eingeben** die Datenbank **AdventureWorksDW2022-DP500** aus.
 
 7. Wählen Sie **OK** aus.
 
 8. Klicken Sie im Fenster **Datenquelleneigenschaften** auf **OK**.
 
-9. Beachten Sie im Bereich **Berichtsdaten**, dass die Datenquelle **AdventureWorksDW2020** hinzugefügt wurde.
+9. Beachten Sie im Bereich **Berichtsdaten**, dass die Datenquelle **AdventureWorksDW2022** hinzugefügt wurde.
 
     ![](../images/dp500-create-a-paginated-report-image17.png)
 
-10. Um ein Dataset zu erstellen, klicken Sie im Bereich **Berichtsdaten** mit der rechten Maustaste auf die Datenquelle **AdventureWorksDW2020**, und wählen Sie dann **Dataset hinzufügen** aus.
+10. Um ein Dataset zu erstellen, klicken Sie im Bereich **Berichtsdaten** mit der rechten Maustaste auf die Datenquelle **AdventureWorksDW2022**, und wählen Sie dann **Datenset hinzufügen**.
 
     ![](../images/dp500-create-a-paginated-report-image18.png)
 
-    Ein Berichtsdataset unterscheidet sich hinsichtlich Zweck und Struktur von einem Power BI-Dataset.
+    *Ein Berichtsdataset unterscheidet sich in Zweck und Struktur von einem Power BI-Datenset.*
 
 11. Ersetzen Sie im Fenster **Dataseteigenschaften** im Feld **Name** den Text durch **SalesOrder**.
 
@@ -227,19 +227,19 @@ In dieser Aufgabe erstellen Sie eine Datenquelle und ein Dataset, um ein Abfrage
 
     ![](../images/dp500-create-a-paginated-report-image19.png)
 
-13. Navigieren Sie im Fenster **Abfrage importieren** zum Ordner **D:\DA100\Lab13A\Assets**, und wählen Sie dann die Datei **SalesOrder.sql** aus.
+13. Navigieren Sie im Fenster **Import Query** zum Ordner **D:\DP500\Allfiles\15\Assets**, und wählen Sie dann die Datei **SalesOrder.sql**.
 
-14. Klicken Sie auf **Öffnen**.
+14. Wählen Sie **Öffnen** aus.
 
 15. Überprüfen Sie im Feld **Abfrage** die Abfrage, und scrollen Sie bis ganz nach unten zum Ende des Abfragetexts.
 
-    *Es ist nicht wichtig, dass Sie die Details der Abfrage-Anweisung verstehen. Es wurde entwickelt, um Verkaufsauftragszeilendetails abzurufen. Die WHERE-Klausel enthält ein Prädikat, um das Abfrageergebnis auf eine einzelne Bestellung zu beschränken. Die ORDER BY-Klausel stellt sicher, dass die Zeilen nach Zeilenreihenfolge zurückgegeben werden.*
+    *Es ist nicht wichtig, dass Sie die Details der Abfrageanweisung verstehen. Sie wurde entwickelt, um Details zu Kundenauftragszeilen abzurufen. Die WHERE-Klausel enthält ein Prädikat, um das Abfrageergebnis auf einen einzigen Auftrag zu beschränken. Die ORDER BY-Klausel stellt sicher, dass die Zeilen in der Reihenfolge der Zeilennummern zurückgegeben werden.*
 
-16. Beachten Sie die Verwendung von SalesOrderNumber (Verkaufsauftragsnummer) in der WHERE-Klausel, die einen Abfrageparameter darstellt.
+16. Beachten Sie die Verwendung von **@SalesOrderNumber** in der WHERE-Klausel, die einen Abfrageparameter darstellt.
 
     ![](../images/dp500-create-a-paginated-report-image20.png)
 
-    *Ein Abfrageparameter ist ein Platzhalter für einen Wert, der zur Abfrageausführung übergeben wird. Sie konfigurieren einen Berichtsparameter, um den Berichtsbenutzer zur Eingabe einer einzelnen Verkaufsauftragsnummer aufzufordern, die dann an den Abfrageparameter übergeben wird.*
+    *Ein Abfrageparameter ist ein Platzhalter für einen Wert, der zur Ausführungszeit der Abfrage übergeben wird. Sie werden einen Berichtsparameter konfigurieren, um deie Berichtsbenutzer*innen zur Eingabe einer einzelnen Auftragsnummer aufzufordern, die dann an den Abfrageparameter übergeben wird.*
 
 17. Wählen Sie **OK** aus.
 
@@ -275,43 +275,43 @@ In dieser Aufgabe konfigurieren Sie den Berichtsparameter mit einem Standardwert
 
     ![](../images/dp500-create-a-paginated-report-image25.png)
 
-5. Um einen Standardwert hinzuzufügen, klicken Sie auf **Hinzufügen**.
+5. Um einen Standardwert hinzuzufügen, wählen Sie **Hinzufügen** aus.
 
 
 6. Ersetzen Sie in der Dropdownliste **Wert** den Text durch **43659**.
 
     ![](../images/dp500-create-a-paginated-report-image26.png)
 
-    „Sales Order 43659“ (Verkaufsauftrag 43659) ist der Wert, den Sie anfänglich zum Testen des Berichtsentwurfs verwenden werden.
+    *Auftrag 43659 ist der Wert, den Sie zunächst zum Testen des Berichtsentwurfs verwenden werden.*
 
 7. Wählen Sie **OK** aus.
 
 8. Speichern Sie den Bericht.
 
-    Jetzt vervollständigen Sie den Entwurf des Berichtskopfzeilen-Bereichs, indem Sie Textfelder hinzufügen, um den Verkaufsauftrag zu beschreiben.
+    *Sie vervollständigen nun die Gestaltung des Berichtskopfzeilenbereichs, indem Sie Textfelder zur Beschreibung des Auftrags hinzufügen.*
 
 ### Abschließen des Berichtskopfzeilen-Layouts
 
 In dieser Aufgabe schließen Sie den Entwurf des Berichtskopfzeilen-Bereichs ab, indem Sie Textfelder hinzufügen.
 
-1. Um dem Berichtskopfzeilen-Bereich ein Textfeld hinzuzufügen, klicken Sie im Menüband auf der Registerkarte **Einfügen** in der Gruppe **Berichtselemente** auf **Textfeld**.
+1. Um dem Berichtskopfzeilenbereich ein Textfeld hinzuzufügen, wählen Sie auf der Registerkarte des Menübands **Einfügen** in der Gruppe **Berichtelemente** die Option **Textfeld**.
 
     ![](../images/dp500-create-a-paginated-report-image27.png)
 
-2. Klicken Sie in den Berichtskopfzeilen-Bereich, direkt unterhalb des Berichtstitel-Textfelds.
+2. Wählen Sie im Berichtskopfzeilenbereich, direkt unter dem Textfeld für den Berichtstitel.
 
-3. Geben Sie in das Textfeld **Sales Order:** (Verkaufsauftrag:) ein, gefolgt von einem Leerzeichen.
+3.  Geben Sie in das neue Textfeld **Auftrag:** ein, gefolgt von einem Leerzeichen.
 
 4. Um einen Platzhalter einzufügen, klicken Sie unmittelbar hinter dem gerade eingefügten Leerzeichen mit der rechten Maustaste, und wählen Sie dann **Platzhalter erstellen** aus.
 
     ![](../images/dp500-create-a-paginated-report-image28.png)
 
 
-5. Klicken Sie im Fenster **Platzhaltereigenschaften** rechts neben der Dropdownliste **Wert** auf die Schaltfläche **fx**.
+5. Wählen Sie im Fenster **Platzhaltereigenschaften** rechts neben der Dropdown-Liste **Wert** die Schaltfläche **fx**.
 
     ![](../images/dp500-create-a-paginated-report-image29.png)
 
-    *Die **Fx-Schaltfläche** ermöglicht das Eingeben eines benutzerdefinierten Ausdrucks. Dieser Ausdruck wird verwendet, um die Verkaufsauftragsnummer zurückzugeben.*
+    *Die Schaltfläche **fx** ermöglicht die Eingabe eines eigenen Ausdrucks. Dieser Ausdruck wird verwendet, um die Auftragsnummer zurückzugeben.*
 
 6. Wählen Sie im Fenster **Ausdruck** in der Liste **Kategorie** die Option **Parameter** aus.
 
@@ -333,23 +333,23 @@ In dieser Aufgabe schließen Sie den Entwurf des Berichtskopfzeilen-Bereichs ab,
 
     |  **Eigenschaft**| **Wert** |
     | --- | --- |
-    |  Position  Ort  Links| 0 |
-    |  Position  Ort  Oben| 0.5 |
-    |  Position  Größe  Breite| 4 |
-    |  Position  Größe  Höhe| 0,25 |
+    |  Position > Ort > Links| 0 |
+    |  Position > Ort > Oben| 0.5 |
+    |  Position > Größe > Breite| 4 |
+    |  Position > Größe > Höhe| 0,25 |
 
 
 13. Um einen Teil des Textfeldtexts zu formatieren, wählen Sie in dem neuen Textfeld nur den Test **Sales Order:** aus.
 
     ![](../images/dp500-create-a-paginated-report-image32.png)
 
-14. Klicken Sie im Menüband auf der Registerkarte **Start** in der Gruppe **Schriftart** auf den Befehl **Fett**.
+14. Wählen Sie auf der Registerkarte des Menübands **Start** in der Gruppe **Schrift** den Befehl **Fett**.
 
     ![](../images/dp500-create-a-paginated-report-image33.png)
 
 15. Fügen Sie dem Berichtskopfzeilen-Bereich ein weiteres Textfeld hinzu, und geben Sie dann den Text **Reseller:** (Handelspartner:) ein, gefolgt von einem Leerzeichen.
 
-    Sie können ein Textfeld auch hinzufügen, indem Sie mit der rechten Maustaste auf den Zeichenbereich klicken und dann Einfügen | Textfeld auswählen.
+    *Tipp: Sie können auch ein Textfeld hinzufügen, indem Sie mit der rechten Maustaste auf die Canvas klicken und dann **Einfügen** > **Textfeld** auswählen.*
 
 16. Fügen Sie hinter dem Leerzeichen einen Platzhalter ein, und legen Sie dann den Wert des Platzhalters auf die Verwendung eines Ausdrucks fest.
 
@@ -364,13 +364,13 @@ In dieser Aufgabe schließen Sie den Entwurf des Berichtskopfzeilen-Bereichs ab,
 
     |  **Eigenschaft**| **Wert** |
     | --- | --- |
-    |  Position  Ort  Links| 0 |
-    |  Position  Ort  Oben| 0,75 |
-    |  Position  Größe  Breite| 4 |
-    |  Position  Größe  Höhe| 0,25 |
+    |  Position > Ort > Links| 0 |
+    |  Position > Ort > Oben| 0,75 |
+    |  Position > Größe > Breite| 4 |
+    |  Position > Größe > Höhe| 0,25 |
 
 
-20. Formatieren Sie den Text **Reseller:** fett.
+20. Formatieren Sie den Text **Wiederverkäufer:** in Fettdruck.
 
 21. Fügen Sie dem Berichtskopfzeilen-Bereich ein drittes (und letztes) Textfeld hinzu, und geben Sie dann den Text **Order Date:** (Auftragsdatum:) ein, gefolgt von einem Leerzeichen.
 
@@ -389,19 +389,19 @@ In dieser Aufgabe schließen Sie den Entwurf des Berichtskopfzeilen-Bereichs ab,
 
 25. Wählen Sie in der Liste **Typ** einen passenden Datumsformattyp aus.
 
-26. Klicken Sie im Fenster **Platzhaltereigenschaften** auf **OK**.
+26. Wählen Sie im Fenster **Platzhaltereigenschaften** **OK**.
 
 27. Konfigurieren Sie im Bereich **Eigenschaften** die folgenden Positionseigenschaften:
 
     |  **Eigenschaft**| **Wert** |
     | --- | --- |
-    |  Position  Ort  Links| 0 |
-    |  Position  Ort  Oben| 1 |
-    |  Position  Größe  Breite| 4 |
-    |  Position  Größe  Höhe| 0,25 |
+    |  Position > Ort > Links| 0 |
+    |  Position > Ort > Oben| 1 |
+    |  Position > Größe > Breite| 4 |
+    |  Position > Größe > Höhe| 0,25 |
 
 
-28. Formatieren Sie den Text **Order Date:** fett.
+28. Formatieren Sie den Text **Bestelldatum:** in Fettdruck.
 
 29. Klicken Sie abschließend im Berichtskopfzeilen-Bereich auf eine leere Fläche.
 
@@ -414,45 +414,45 @@ In dieser Aufgabe schließen Sie den Entwurf des Berichtskopfzeilen-Bereichs ab,
 
 32. Speichern Sie den Bericht.
 
-33. Um eine Vorschau des Berichts anzuzeigen, klicken Sie im Menüband auf der Registerkarte **Start** in der Gruppe **Ansichten** auf **Ausführen**.
+33. Um eine Vorschau des Berichts anzuzeigen, wählen Sie auf der Registerkarte des Menübands **Start** in der Gruppe **Ansichten** die Option **Ausführen**.
 
     ![](../images/dp500-create-a-paginated-report-image39.png)
 
-    Da der einzige Berichtsparameter einen Standardwert hat, wird der Bericht automatisch ausgeführt.
+    *Bei der Ausführung des Berichts wird der Bericht im HTML-Format angezeigt. Da der einzige Berichtsparameter einen Standardwert hat, wird der Bericht automatisch ausgeführt.*
 
 34. Überprüfen Sie, ob der gerenderte Bericht wie folgt aussieht:
 
     ![](../images/dp500-create-a-paginated-report-image40.png)
 
 
-35. Um zur Entwurfsansicht zurückzukehren, klicken Sie im Menüband auf der Registerkarte **Ausführen** in der Gruppe **Ansichten** auf **Entwurf**.
+35. Um zur Entwurfsansicht zurückzukehren, wählen Sie auf der Registerkarte des Menübands **Ausführen** in der Gruppe **Ansichten** die Option **Entwurf**.
 
     ![](../images/dp500-create-a-paginated-report-image41.png)
 
-    Nun fügen Sie dem Textbereich des Berichts eine Tabelle hinzu, um ein formatiertes Layout der Auftragspositionen anzuzeigen.
+    *Sie fügen nun eine Tabelle in den Berichtskörper ein, um ein formatiertes Layout der Auftragszeilen anzuzeigen.*
 
 ### Hinzufügen eines Tabellendatenbereichs
 
 In dieser Aufgabe fügen Sie dem Berichtslayout einen Tabellendatenbereich hinzu.
 
-1. Klicken Sie im Menüband auf der Registerkarte **Einfügen** in der Gruppe **Datenbereiche** auf **Tabelle**, und wählen Sie dann **Tabelle einfügen** aus.
+1. Öffnen Sie auf der Ribbon-Registerkarte **Einfügen** in der Gruppe **Datenregionen** die Option **Tabelle** und wählen Sie dann **Tabelle einfügen**.
 
     ![](../images/dp500-create-a-paginated-report-image42.png)
 
-2. Um die Tabelle hinzuzufügen, klicken Sie auf einen leeren Bereich im Textbereich des Berichts.
+2. Um die Tabelle hinzuzufügen, wählen Sie einen leeren Bereich innerhalb des Berichtskörpers.
 
 3. Konfigurieren Sie im Bereich **Eigenschaften** die folgenden Positionseigenschaften:
 
     |  **Eigenschaft**| **Wert** |
     | --- | --- |
-    |  Position  Ort  Links| 0 |
-    |  Position  Ort  Oben| 0 |
+    |  Position > Ort > Links| 0 |
+    |  Position > Ort > Oben| 0 |
 
 
     *Die Tabelle zeigt fünf Spalten an. Standardmäßig enthält die Tabellenvorlage nur drei Spalten.*
 
 
-4. Um der Tabelle eine Spalte hinzuzufügen, klicken Sie mit der rechten Maustaste in eine beliebige Zelle der letzten Spalte, und wählen Sie dann Spalte einfügen | Rechts aus.
+4. Um der Tabelle eine Spalte hinzuzufügen, klicken Sie mit der rechten Maustaste in eine beliebige Zelle der letzten Spalte und wählen dann **Spalte einfügen** > **Rechts**.
 
     ![](../images/dp500-create-a-paginated-report-image43.png)
 
@@ -462,7 +462,7 @@ In dieser Aufgabe fügen Sie dem Berichtslayout einen Tabellendatenbereich hinzu
 
     ![](../images/dp500-create-a-paginated-report-image44.png)
 
-7. Klicken Sie auf das Feldauswahlsymbol, und wählen Sie dann das Feld **Position** aus.
+7. Wählen Sie das Symbol für die Feldauswahl und dann das Feld **Zeile** aus.
 
     ![](../images/dp500-create-a-paginated-report-image45.png)
 
@@ -474,7 +474,7 @@ In dieser Aufgabe fügen Sie dem Berichtslayout einen Tabellendatenbereich hinzu
 
     - Produkt
 
-    - Quantity (Menge)
+    - Menge
 
     - UnitPrice (Stückpreis)
 
@@ -492,21 +492,21 @@ In dieser Aufgabe fügen Sie dem Berichtslayout einen Tabellendatenbereich hinzu
 
     ![](../images/dp500-create-a-paginated-report-image49.png)
 
-    *Die Tabelle enthält eine Kopfzeile und 12 Zeilen für verkaufsauftragszeilen. Es gibt viele Verbesserungen, die durch die Formatierung des Tabellenlayouts vorgenommen werden können.*
+    *Die Tabelle enthält eine Kopfzeile und 12 Zeilen mit Aufträgen. Es gibt viele Verbesserungen, die durch die Formatierung des Tabellenlayouts erreicht werden können.*
 
-    In der nächsten Aufgabe werden Sie Folgendes tun:
+    *In der nächsten Aufgabe werden Sie Folgendes tun:*
 
-    - Formatieren der Tabellenkopfzeile mithilfe einer Hintergrundfarbe und eines fetten Schriftschnitts
+    - *Formatieren er Tabellenkopfzeile mit einer Hintergrundfarbe und einem fetten Schriftstil*
 
-    - Ändern der Spaltenbreiten, um redundanten Platz zu entfernen und zu verhindern, dass lange Textwerte umbrechen
+    - *Ändern der Spaltenbreiten, um überflüssigen Platz zu entfernen und um zu verhindern, dass lange Textwerte umgebrochen werden*
 
-    - Linksbündiges Ausrichten der ersten Spaltenwerte
+    - *Linksbündiges Ausrichten der ersten Spaltenwerte*
 
-    - Rechtsbündiges Ausrichten der letzten drei Spaltenwerte
+    - *Rechtsbündiges Ausrichten der letzten drei Spaltenwerte*
 
-    - Formatieren von Währungswerten mit einem Währungssymbol (für USD)
+    - *Formatieren von Währungswerten mit einem Währungssymbol (für USD)*
 
-    - Hinzufügen und Formatieren einer Ergebniszeile für die Tabelle
+    - * Hinzufügen und Formatieren einer Zeile mit einer Gesamtsumme für die Tabelle*
 
 
 ### Formatieren des Tabellendatenbereichs
@@ -519,34 +519,34 @@ In dieser Aufgabe formatieren Sie den Tabellendatenbereich.
 
     ![](../images/dp500-create-a-paginated-report-image50.png)
 
-    Die Zellenführungslinien sollen Ihnen beim Konfigurieren ganzer Zeilen oder Spalten helfen.
+    *Die Zellenhilfslinien helfen Ihnen, ganze Zeilen oder Spalten zu konfigurieren.*
 
-3. Um die Tabellenkopfzeile zu formatieren, klicken Sie auf die Führungslinie der Kopfzeile.
+3. Um den Tabellenkopf zu formatieren, wählen Sie die Kopfzeilenhilfe.
 
     ![](../images/dp500-create-a-paginated-report-image51.png)
 
-    *Wenn Sie eine Zeile oder eine Spaltenführung auswählen, werden alle Zellen in der Zeile oder Spalte markiert. Jede Zelle ist tatsächlich ein Textfeld. Das Formatieren einzelner Textfelder oder eine Mehrfachauswahl von Textfeldern kann dann mithilfe des **Eigenschaftenbereichs** oder der Menübandbefehle erreicht werden.*
+     *Wenn Sie eine Zeile oder eine Spaltenhilfe auswählen, werden alle Zellen in der Zeile oder Spalte markiert. Jede Zelle ist in Wirklichkeit ein Textfeld. Die Formatierung eines einzelnen Textfeldes - oder einer Mehrfachauswahl von Textfeldern - kann dann über den Bereich **Eigenschaften** oder über die Registerkarten-Befehle erfolgen.*
 
 4. Konfigurieren Sie im Bereich **Eigenschaften** (oder im Menüband) die folgenden Eigenschaften:
 
     |  **Eigenschaft**| **Wert** |
     | --- | --- |
-    |  Füllung | Hintergrundfarbe| DarkGreen (Dunkelgrün; Tipp: zeigen Sie mit dem Mauszeiger auf die einzelnen Farben, um ihren jeweiligen Namen anzuzeigen) |
-    |  Schriftfarbe| Weiß |
-    |  Schriftart  Schriftart  FontWeight (Schriftbreite)| Fett |
+    |  Füllung > Hintergrundfarbe| DarkGreen (Dunkelgrün; Tipp: zeigen Sie mit dem Mauszeiger auf die einzelnen Farben, um ihren jeweiligen Namen anzuzeigen) |
+    |  Schrift > Farbe| White |
+    |  Schriftart > Schriftart > Schriftbreite| Fett |
 
 
 5. Wählen Sie die erste Spaltenführungslinie aus.
 
     ![](../images/dp500-create-a-paginated-report-image52.png)
 
-6. Legen Sie im Bereich Eigenschaften die Eigenschaft Position | Größe | Breite auf 0,5 fest.
+6. Legen Sie im Bereich **Eigenschaften** die Eigenschaft **Position** > **Größe** > **Breite** auf **0,5** fest.
 
 7. Legen Sie die Breite der zweiten Spalte auf **2,5** fest.
 
-8. Wählen Sie die **Spaltenführungslinie "Menge** " aus, und wählen Sie dann beim Drücken der **STRG-TASTE** auch die letzten beiden Spaltenüberschriftenführungslinien (**Einzelpreis** und **Betrag**) aus.
+8. Wählen Sie die Spaltenhilfslinien **Menge** und wählen Sie dann bei gedrückter **Strg**-Taste auch die beiden letzten Spaltenkopfhilfslinien aus (**Einheitspreis** und **Betrag**).
 
-9. Legen Sie im Bereich **Eigenschaften** (oder Menüband) die Eigenschaft **Ausrichtung | TextAlign** > ** (Textausrichtung) auf **Right (Rechts) fest.
+9. Setzen Sie im Bereich (oder Menüband) **Eigenschaften** die Eigenschaft **Ausrichtung** > **Textausrichtung** auf **Rechts**.
 
 10. Legen Sie das Detailtextfeld **Position** auf Linksausrichtung fest.
 
@@ -592,23 +592,23 @@ In dieser Aufgabe formatieren Sie den Tabellendatenbereich.
 
     ![](../images/dp500-create-a-paginated-report-image60.png)
 
-23. Um den Bericht erneut auszuführen, klicken Sie rechts auf **Bericht anzeigen**.
+23. Um den Bericht erneut auszuführen, wählen Sie auf der rechten Seite **Bericht anzeigen**.
 
     ![](../images/dp500-create-a-paginated-report-image61.png)
 
-    Dieser Verkaufsauftrag umfasst 72 Auftragspositionen-Zeilen, sodass die Daten auf vielen Seiten gerendert werden.
+    *Dieser Auftrag hat 72 Auftragszeilen, so dass die Daten über mehrere Seiten gerendert werden.*
 
-24. Um zur zweiten Seite des Berichts zu navigieren, klicken Sie im Menüband auf der Registerkarte **Ausführen** in der Gruppe **Navigation** auf **Weiter**.
+24. Um zur zweiten Seite des Berichts zu navigieren, wählen Sie auf der Registerkarte des Menübands **Ausführen** in der Gruppe **Navigation** die Option **Nächste**.
 
     ![](../images/dp500-create-a-paginated-report-image62.png)
 
 25. Beachten Sie, dass die Tabellenkopfzeile auf Seite 2 nicht angezeigt wird.
 
-    Dieses Problem wird in der nächsten Aufgabe behandelt.
+    *Dieses Problem wird in der nächsten Aufgabe behandelt.*
 
 26. Scrollen Sie bis zum Ende der Seite, und beachten Sie, dass in der Berichtsfußzeile nur die Ausführungszeit angezeigt wird.
 
-    In der nächsten Aufgabe verbessern Sie den Fußzeilentext, indem Sie die Seitenzahl anfügen.
+    *In der nächsten Aufgabe verbessern Sie den Fußzeilentext, indem Sie die Seitenzahl anhängen.*
 
 ### Abschließen des Berichtsentwurfs
 
@@ -618,7 +618,7 @@ In dieser Aufgabe schließen Sie den Berichtsentwurf ab, indem Sie sicherstellen
 
 2. Um sicherzustellen, dass die Tabellenkopfzeile auf allen Seiten wiederholt wird, wählen Sie zunächst ein beliebiges Textfeld der Tabelle aus.
 
-3. Klicken Sie im Bereich **Gruppierung** (am unteren Rand des Berichts-Designers) ganz rechts im Bereich **Spaltengruppen** auf den Pfeil nach unten, und wählen Sie dann **Erweiterter Modus** aus.
+3. Wählen Sie im Bereich **Gruppierung** (der sich am unteren Rand des Berichtsdesigners befindet) ganz rechts unter **Spaltengruppen** den Pfeil nach unten und dann **Erweiterter Modus** aus.
 
     ![](../images/dp500-create-a-paginated-report-image63.png)
 
@@ -626,17 +626,17 @@ In dieser Aufgabe schließen Sie den Berichtsentwurf ab, indem Sie sicherstellen
 
     ![](../images/dp500-create-a-paginated-report-image64.png)
 
-    Dadurch wurde die Tabellenkopfzeile ausgewählt.
+    *Damit wurde die Kopfzeile der Tabelle ausgewählt.*
 
-5. Legen Sie im Bereich **Eigenschaften** die Eigenschaft **Sonstige | RepeatOnNewPage** > ** (Auf neuer Seite wiederholen) auf **True fest.
+5. Setzen Sie im Bereich **Eigenschaften** die Eigenschaft **Andere** > **Wiederholen auf neuer Seite** auf **Wahr**.
 
-    Dadurch wird sichergestellt, dass die erste statische Gruppe (die die Tabellenkopfzeile darstellt) auf allen Seiten wiederholt wird.
+    *Damit wird sichergestellt, dass die erste statische Gruppe (die die Tabellenkopfzeile darstellt) auf allen Seiten wiederholt wird.*
 
 6. Klicken Sie im Tabellenfußzeilen-Bereich mit der rechten Maustaste auf das Textfeld **ExecutionTime** (Ausführungszeit), und wählen Sie dann **Ausdruck** aus.
 
     ![](../images/dp500-create-a-paginated-report-image65.png)
 
-7. Fügen Sie im Fenster **Ausdruck** im Feld „Ausdruck“ ein Leerzeichen an, gefolgt von **&amp; " | Seite " &amp;**, um folgendes Ergebnis zu erzielen:
+7. Fügen Sie im Fenster **Ausdruck** im Feld Ausdruck ein Leerzeichen ein, gefolgt von **&amp; " | Seite " &amp;**, um den folgenden Ausdruck zu erzeugen:
 
 
     ```
@@ -662,17 +662,17 @@ In dieser Aufgabe schließen Sie den Berichtsentwurf ab, indem Sie sicherstellen
 
     ![](../images/dp500-create-a-paginated-report-image68.png)
 
-    Als Letztes stellen Sie sicher, dass die Seitenbreite auf genau sechs Zoll (ca. 15 cm) festgelegt ist, und entfernen auch den Standardwert für den Berichtsparameter.
+    *Der Entwurf des Berichts ist nun abgeschlossen. Abschließend stellen Sie sicher, dass die Seitenbreite auf genau sechs Zoll eingestellt ist, und entfernen den Standardwert für den Berichtsparameter.*
 
-14. Um den Textbereich des Berichts auszuwählen, klicken Sie mit der rechten Maustaste auf ein beliebiges Tabellentextfeld, und wählen Sie dann Auswählen | Text aus.
+14. Um die Berichtsvorlage auszuwählen, klicken Sie mit der rechten Maustaste auf ein beliebiges Tabellenfeld und wählen Sie dann **Auswählen** > **Vorlage**.
 
     ![](../images/dp500-create-a-paginated-report-image69.png)
 
-    Da die Tabelle den gesamte Textbereich des Berichts ausfüllt, muss diese Methode verwendet werden, um den Textbereich des Berichts auszuwählen.
+    *Da die Tabelle den gesamten Berichtskörper ausfüllt, muss diese Technik verwendet werden, um den Berichtskörper auszuwählen.*
 
-15. Vergewissern Sie sich im Bereich Eigenschaften, dass die Eigenschaft Position | Größe | Breite auf 6 festgelegt ist.
+15. Stellen Sie im Bereich **Eigenschaften** sicher, dass die Eigenschaft **Position** > **Größe** > **Breite** auf **6** gesetzt ist.
 
-    Es ist wichtig, dass die Breite sechs Zoll (ca. 15 cm) nicht überschreitet, weil die Tabelle sonst beim Rendering ins Druckformat auf mehrere Seiten verteilt würde.
+    *Es ist wichtig, dass die Breite nicht größer als sechs Zoll ist, da die Tabelle bei der Übertragung in das Druckformat auf mehrere Seiten aufgeteilt werden würde.*
 
 16. Öffnen Sie im Bereich **Berichtsdaten** die Eigenschaften des Berichtsparameters **SalesOrderNumber**.
 
@@ -694,12 +694,12 @@ In dieser Aufgabe zeigen Sie den Bericht im Seitenlayoutmodus an.
 
 2. Geben Sie in das Parameterfeld **Sales Order Number** den Wert **51721** ein.
 
-3. Klicken Sie im Menüband auf der Registerkarte **Ausführen** in der Gruppe **Drucken** auf **Seitenlayout**.
+3. Wählen Sie auf der Registerkarte des Menübands **Ausführen** in der Gruppe **Drucken** die Option **Drucklayout**.
 
     ![](../images/dp500-create-a-paginated-report-image71.png)
 
-    Der Seitenlayoutmodus bietet eine Vorschau des Berichts, wie er aussehen wird, wenn er in strikter Seitengröße gedruckt wird.
+    *Der Drucklayoutmodus bietet eine Vorschau darauf, wie der Bericht aussehen wird, wenn er in der vorgeschriebenen Seitengröße gedruckt wird.*
 
 4. Navigieren Sie zu den Seiten 2 und 3.
 
-    *In dieser Übung veröffentlichen Sie den Bericht nicht. Beachten Sie, dass paginierte Berichte nur in der Power BI-Dienst gerendert werden können, wenn sie in einem Arbeitsbereich gespeichert sind, deren Lizenzmodus auf **Premium-Einzelbenutzerlizenz** oder **Premium pro Kapazität** festgelegt ist und wenn diese Kapazität die Arbeitsauslastung für paginierte Berichte aktiviert hat.*
+    *In diesem Lab veröffentlichen Sie den Bericht nicht. Beachten Sie, dass paginierte Berichte nur im Power BI-Dienst gerendert werden können, wenn sie in einem Arbeitsbereich gespeichert sind, dessen Lizenzmodus auf **Premium pro Benutzer** oder **Premium pro Kapazität** eingestellt ist, und wenn für diese Kapazität die Arbeitslast für paginierte Berichte aktiviert ist.*

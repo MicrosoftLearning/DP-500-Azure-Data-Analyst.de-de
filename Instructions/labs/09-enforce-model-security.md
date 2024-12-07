@@ -10,17 +10,17 @@ lab:
 
 **Die geschätzte Dauer dieses Labs beträgt 45 Minuten.**
 
-In dieser Übung aktualisieren Sie ein vordefiniertes Datenmodell, um die Sicherheit zu erzwingen. Insbesondere sollten Vertriebsmitarbeiter im Adventure Works-Unternehmen nur in der Lage sein, Verkaufsdaten im Zusammenhang mit ihrer zugeordneten Vertriebsregion anzuzeigen.
+In diesem Lab aktualisieren Sie ein vorab entwickeltes Datenmodell, um die Sicherheit zu erzwingen. Insbesondere sollten Vertriebsmitarbeiter im Adventure Works-Unternehmen nur in der Lage sein, Verkaufsdaten im Zusammenhang mit ihrer zugeordneten Vertriebsregion anzuzeigen.
 
 In diesem Lab lernen Sie Folgendes:
 
-- Erstellen sie statische Rollen.
+- Erstellen von statischen Rollen.
 
-- Erstellen sie dynamische Rollen.
+- Erstellen von dynamische Rollen.
 
-- Überprüfen von Rollen
+- Überprüfen von Rollen.
 
-- Zuordnen von Sicherheitsprinzipals zu Datasetrollen
+- Zuordnen von Sicherheitsprinzipals zu Datasetrollen.
 
 ## Erste Schritte
 
@@ -28,7 +28,7 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
 
 ### Klonen des Repositorys für diesen Kurs
 
-1. Öffnen Sie über das Startmenü die -Developer-Eingabeaufforderung.
+1. Öffnen Sie im Startmenü die Eingabeaufforderung
 
     ![](../images/command-prompt.png)
 
@@ -36,7 +36,7 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
 
     `d:` 
 
-   Drücken Sie die EINGABETASTE.
+   Drücken Sie die Eingabetaste.
 
     ![](../images/command-prompt-2.png)
 
@@ -49,31 +49,31 @@ In dieser Übung bereiten Sie Ihre Umgebung vor.
    
 1. Öffnen Sie das D-Laufwerk im Datei-Explorer, um sicherzustellen, dass die Dateien heruntergeladen wurden.
 
-### Öffnen Sie Power BI Desktop.
+### Öffnen Sie den Power BI Desktop
 
-In dieser Aufgabe legen Sie Optionen für Power BI Desktop fest.
+In dieser Aufgabe richten Sie den Power BI Desktop ein.
 
-1. Um Explorer zu öffnen, wählen Sie auf der Taskleiste die **verknüpfung Explorer** aus.
+1. Um den Datei-Explorer zu öffnen, wählen Sie auf der Taskleiste den Shortcut **Datei-Explorer** aus.
 
-2. Wechseln Sie zum **Ordner "D:\DP500\Allfiles\09\Starter** ".
+2. Wechseln Sie zum Ordner **D:\DP500\Allfiles\09\Starter**.
 
-3. Um eine vordefinierte Power BI Desktop-Datei zu öffnen, doppelklicken Sie auf die Sales Analysis - Erzwingen sie die **Datei "security.pbix** ".
+3. Um eine vorentwickelte Power BI Desktop-Datei zu öffnen, doppelklicken Sie auf die Datei **Umsatzanalyse - Enforce model security.pbix**.
 
-4. Wenn Sie noch nicht angemeldet sind, wählen Sie in der oberen rechten Ecke von Power BI Desktop die Option **"Anmelden"** aus. Verwenden Sie die Lab-Anmeldeinformationen, um den Anmeldevorgang abzuschließen.
+4. Wenn Sie noch nicht angemeldet sind, wählen Sie in der oberen rechten Ecke vom Power BI Desktop **Anmelden** aus. Verwenden Sie die Lab-Anmeldeinformationen, um den Anmeldevorgang abzuschließen.
 
     ![](../images/dp500-enforce-model-security-image2.png)
 
-5. Um die Datei zu speichern, wählen Sie im **Menüband "Datei** " die Option **"Speichern unter**" aus.
+5. Um die Datei zu speichern, wählen Sie im Menüband **Datei** die Option **Speichern unter** aus.
 
-6. Navigieren Sie im Fenster **Speichern unter** zum Ordner **D:\PL300\MySolution**.
+6. Navigieren Sie im Fenster **Speichern unter** zum Ordner **D:\DP500\Allfiles\09\MySolution**.
 
-7. Klicken Sie auf **Speichern**.
+7. Wählen Sie **Speichern**.
 
     *Sie aktualisieren die Power BI Desktop-Lösung, um die Sicherheit auf Zeilenebene zu erzwingen.*
 
 ### Anmelden beim Power BI-Dienst
 
-Bei dieser Aufgabe melden Sie sich bei der Power BI-Dienst an, starten eine Testlizenz und erstellen einen Arbeitsbereich.
+Bei dieser Aufgabe melden Sie sich beim Power BI-Dienst an, starten eine Testlizenz und erstellen einen Arbeitsbereich.
 
 *Wichtig: Wenn Sie Power BI bereits in Ihrer VM-Umgebung eingerichtet haben, fahren Sie mit der nächsten Aufgabe fort.*
 
@@ -83,40 +83,40 @@ Bei dieser Aufgabe melden Sie sich bei der Power BI-Dienst an, starten eine Test
 
     *Wichtig: Sie müssen dieselben Anmeldeinformationen verwenden, die zum Anmelden von Power BI Desktop verwendet werden.*
 
-3. Wählen Sie oben rechts das Profilsymbol und dann " **Testversion starten"** aus.
+3. Wählen Sie oben rechts das Profilsymbol und dann **Testversion starten** aus.
 
     ![](../images/dp500-enforce-model-security-image3.png)
 
-4. Wenn Sie dazu aufgefordert werden, wählen Sie **"Testversion starten"** aus.
+4. Wenn Sie dazu aufgefordert werden, wählen Sie **Testversion starten** aus.
 
-5. Führen Sie alle erneuten Aufgaben aus Standard, um die Testeinrichtung abzuschließen.
+5. Führen Sie alle verbleibenden Aufgaben aus, um die Testeinrichtung abzuschließen.
 
     *Tipp: Die Power BI-Webbrowserumgebung wird als **Power BI-Dienst** bezeichnet.*
 
 ### Erstellen eines Arbeitsbereichs
 
-In dieser Aufgabe erstellen Sie einen Log Analytics-Arbeitsbereich.
+In dieser Aufgabe erstellen Sie einen Arbeitsbereich.
 
-1. Wählen Sie **im Power BI-Dienst zum Erstellen eines Arbeitsbereichs im **Navigationsbereich** (auf der linken Seite) Arbeitsbereiche** aus, und wählen Sie **dann "Arbeitsbereich** erstellen" aus.
+1. Wählen Sie im Power BI-Dienst zum Erstellen eines Arbeitsbereichs im **Navigations **-bereich** (auf der linken Seite) Arbeitsbereiche** aus, und wählen Sie dann **Arbeitsbereich erstellen** aus.
 
     ![](../images/dp500-enforce-model-security-image5.png)
 
 
-2. Geben Sie im **Bereich "Arbeitsbereich erstellen" (rechts) im **Feld "Arbeitsbereichsname****" einen Namen für den Arbeitsbereich ein.
+2. Geben Sie einen im Bereich **Einen Arbeitsbereich erstellen** (rechts), im Feld **Arbeitsbereichsname** einen Namen für den Arbeitsbereich ein.
 
-    Der Name muss innerhalb des Mandanten eindeutig sein.
+    *Der Name des Arbeitsbereichs muss innerhalb des Mandanten eindeutig sein.*
 
     ![](../images/dp500-enforce-model-security-image6.png)
 
-3. Klicken Sie auf **Speichern**.
+3. Wählen Sie **Speichern**.
 
     *Nach der Erstellung wird der Arbeitsbereich geöffnet. In einer späteren Übung veröffentlichen Sie ein Dataset in diesem Arbeitsbereich.*
 
-### Überprüfen Sie das Datenmodell.
+### Überprüfen Sie das Datenmodell
 
 In dieser Aufgabe überprüfen Sie das Datenmodell.
 
-1. Wechseln Sie in Power BI Desktop zur Datenansicht .
+1. Auf dem Power BI Desktop links wechseln Sie zur Ansicht **Modell**.
 
     ![](../images/dp500-enforce-model-security-image8.png)
 
@@ -125,23 +125,23 @@ In dieser Aufgabe überprüfen Sie das Datenmodell.
 
     ![](../images/dp500-enforce-model-security-image9.png)
 
-    *Das Modell besteht aus sechs Dimensionstabellen und einer Faktentabelle. In der Tabelle " **Verkaufsdetails** " werden Die Verkaufsauftragsdetails gespeichert. Es ist ein klassisches Starschemadesign.*
+    *Das Modell besteht aus sechs Dimensionstabellen und einer Faktentabelle. Die Faktentabelle **Umsatz** speichert Details zu Kundenaufträgen. Es handelt sich um ein klassisches Sternschema*.
 
-3. Erweitern Sie die **Tabelle "Sales Territory** ".
+3. Erweitern Sie die Tabelle **Vertriebsgebiet**.
 
     ![](../images/dp500-enforce-model-security-image10.png)
 
-4. Beachten Sie, dass die Tabelle eine **Spalte "Region** " enthält.
+4. Beachten Sie, dass die Tabelle eine Spalte **Region** enthält.
 
-    *In **der Spalte "Region** " werden die Vertriebsregionen von Adventure Works gespeichert. In dieser Organisation dürfen Vertriebsmitarbeiter nur Daten im Zusammenhang mit ihrer zugewiesenen Vertriebsregion anzeigen. In dieser Übung implementieren Sie zwei verschiedene Sicherheitstechniken auf Zeilenebene, um Datenberechtigungen zu erzwingen.*
+    *Die Spalte **Region** speichert die Verkaufsregionen von Adventure Works. In dieser Organisation dürfen Vertriebsmitarbeiter nur Daten sehen, die sich auf ihr zugewiesenes Vertriebsgebiet beziehen. In dieser Übung werden Sie zwei verschiedene Sicherheitstechniken auf Zeilenebene implementieren, um Datenberechtigungen zu erzwingen.*
 
-## Erstellen statischer Rollen
+## Erstellen von statischen Rollen
 
-In dieser Übung erstellen und überprüfen Sie statische Rollen und sehen dann, wie Sie die Sicherheitsprinzipale den Datasetrollen zuordnen würden.
+In dieser Übung werden Sie statische Rollen erstellen und validieren und dann sehen, wie Sie Sicherheitsprinzipale den Datensatzrollen zuordnen.
 
-### Erstellen statischer Rollen
+### Erstellen von statischen Rollen
 
-In dieser Aufgabe erstellen Sie eine neue Benutzerrolle.
+In dieser Aufgabe werden Sie zwei statische Rollen erstellen.
 
 1. Wechseln Sie zur **Berichtansicht**.
 
@@ -151,10 +151,10 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrolle.
 
     ![](../images/dp500-enforce-model-security-image12.png)
 
-    *Derzeit sieht das Diagramm übermäßig ausgelastet aus. Das liegt daran, dass alle Regionen sichtbar sind. Wenn die Lösung die Sicherheit auf Zeilenebene erzwingt, wird dem Berichtsanwender nur eine Region angezeigt.*
+    *Im Moment sieht das Diagramm noch sehr unübersichtlich aus. Das liegt daran, dass alle Regionen sichtbar sind. Wenn die Lösung die Sicherheit auf Zeilenebene erzwingt, sieht der Berichtsbenutzer*innen nur eine Region.*
 
 
-3. Wählen Sie auf der Registerkarte **Modellierung** des Menübands in der Gruppe **Sicherheit** die Option **Rollen verwalten** aus.
+3. Um eine Sicherheitsrolle hinzuzufügen, wählen Sie auf der Registerkarte des Menübands **Modellierung** in der Gruppe **Sicherheit** die Option **Rollen verwalten**.
 
     ![](../images/dp500-enforce-model-security-image13.png)
 
@@ -162,66 +162,66 @@ In dieser Aufgabe erstellen Sie eine neue Benutzerrolle.
 
     ![](../images/dp500-enforce-model-security-image14.png)
 
-5. Um die Rolle zu benennen, ersetzen Sie den markierten Text durch **Australien**, und drücken Sie **dann die EINGABETASTE**.
+5. Um die Rolle zu benennen, ersetzen Sie den markierten Text durch **Australien** und drücken dann die **Eingabetaste**.
 
     ![](../images/dp500-enforce-model-security-image15.png)
 
 
-6. Wählen Sie in der **** Tabellenliste für die **Tabelle "Sales Territory**" die Auslassungspunkte und dann **"Filter > **** hinzufügen[Region]**" aus.
+6. Wählen Sie in der Liste **Tabellen** für die Tabelle **Vertriebsgebiet** die Auslassungspunkte aus und wählen Sie dann **Filter hinzufügen** > **[Region]**.
 
     ![](../images/dp500-enforce-model-security-image16.png)
 
-7. Ersetzen Sie **im Feld "DAX-Ausdruck **" des **Tabellenfilters "Wert**" durch **"Australien**".
+7. Ersetzen Sie im Feld **Tabellenfilter DAX-Ausdruck** **Wert** durch **Australien**.
 
     ![](../images/dp500-enforce-model-security-image17.png)
 
-    *Dieser Ausdruck filtert die **Spalte "Region** " nach dem Wert **"Australien**".*
+    *Dieser Ausdruck filtert die Spalte **Region** nach dem Wert **Australien**.*
 
-8. Um eine andere Rolle zu erstellen, drücken Sie **"Erstellen"**.
+8. Um eine andere Rolle zu erstellen, drücken Sie **Erstellen**.
 
     ![](../images/dp500-enforce-model-security-image18.png)
 
 
-9. Wiederholen Sie die Schritte in dieser Aufgabe, um eine Rolle namens **"Kanada** " zu erstellen, die die **Spalte "Region** " nach **Kanada** filtert.
+9. Wiederholen Sie die Schritte in dieser Aufgabe, um eine Rolle namens **Kanada** zu erstellen, die die Spalte **Region** nach **Kanada** filtert.
 
     ![](../images/dp500-enforce-model-security-image19.png)
 
-    *In dieser Übung erstellen Sie nur die beiden Rollen. Berücksichtigen Sie jedoch, dass in einer realen Lösung eine Rolle für jede der 11 Adventure Works-Regionen erstellt werden muss.*
+    *In diesem Lab erstellen Sie nur die beiden Rollen. Berücksichtigen Sie jedoch, dass in einer realen Lösung eine Rolle für jede der 11 Adventure Works-Regionen erstellt werden muss.*
 
-10. Klicken Sie auf **Speichern**.
+10. Wählen Sie **Speichern**.
 
     ![](../images/dp500-enforce-model-security-image20.png)
 
-### Überprüfen der statischen Rollen
+### Überprüfen von statischen Rollen
 
 In dieser Aufgabe überprüfen Sie eine der statischen Rollen.
 
-1. Wählen Sie auf der Registerkarte **Modellierung** des Menübands in der Gruppe **Sicherheit** die Option **Rollen verwalten** aus.
+1. Wählen Sie auf der Registerkarte des Menübands **Modellierung** in der Gruppe **Sicherheit** die Option **Anzeigen als**.
 
     ![](../images/dp500-enforce-model-security-image21.png)
 
 
-2. Wählen Sie im Fenster **Als Rollen anzeigen** die Rolle **Game** (Spiel) aus.
+2. Wählen Sie im Fenster **Als Rollen anzeigen** die Rolle **Australien**.
 
     ![](../images/dp500-enforce-model-security-image22.png)
 
-3. Wählen Sie **OK** aus.
+3. Klickan Sie auf **OK**.
 
     ![](../images/dp500-enforce-model-security-image23.png)
 
-4. Beachten Sie auf der Berichtsseite, dass das diagramm mit gestapelten Säulen nur Daten für Australien anzeigt.
+4. Auf der Berichtsseite sehen Sie, dass das gestapelte Säulendiagramm nur Daten für Australien anzeigt.
 
     ![](../images/dp500-enforce-model-security-image24.png)
 
-5. Beachten Sie oben im Bericht das gelbe Banner, das die erzwungene Rolle bestätigt.
+5. Am oberen Rand des Berichts finden Sie ein gelbes Banner, das die erzwungene Rolle bestätigt.
 
     ![](../images/dp500-enforce-model-security-image25.png)
 
-6. Um die Anzeige mithilfe der Rolle zu beenden, wählen Sie **rechts neben dem gelben Banner die Option "Anzeige beenden"** aus.
+6. Um die Anzeige mit Hilfe der Rolle zu beenden, wählen Sie rechts neben dem gelben Banner **Anzeige beenden**.
 
     ![](../images/dp500-enforce-model-security-image26.png)
 
-### Veröffentlichen des Berichts
+### Den Bericht veröffentlichen
 
 In dieser Aufgabe wird der Bericht veröffentlicht.
 
@@ -230,11 +230,11 @@ In dieser Aufgabe wird der Bericht veröffentlicht.
     ![](../images/dp500-enforce-model-security-image27.png)
  
 
-2. Klicken Sie zum Veröffentlichen Ihres Berichts auf der Registerkarte **Home** auf **Veröffentlichen**.
+2. Klicken Sie zum Veröffentlichen Ihres Berichts auf der Registerkarte des Menübands auf **Start**, wählen Sie **Veröffentlichen** aus.
 
     ![](../images/dp500-enforce-model-security-image28.png)
 
-3. Wählen Sie im Fenster In Power BI veröffentlichen den Arbeitsbereich aus.
+3. Wählen Sie im Fenster **In Power BI veröffentlichen** Ihren Arbeitsbereich und wählen Sie dann **Auswählen**.
 
     ![](../images/dp500-enforce-model-security-image29.png)
 
@@ -242,44 +242,44 @@ In dieser Aufgabe wird der Bericht veröffentlicht.
 
     ![](../images/dp500-enforce-model-security-image30.png)
 
-### Konfigurieren der Sicherheit auf Zeilenebene
+### Konfigurieren der Sicherheit auf Zeilenebene (*optional*)
 
 In dieser Aufgabe erfahren Sie, wie Sie die Sicherheit auf Zeilenebene im Power BI-Dienst konfigurieren. 
 
-Diese Aufgabe basiert auf dem Vorhandensein einer **Salespeople_Australia** Sicherheitsgruppe im Mandanten, in dem Sie arbeiten. Diese Sicherheitsgruppe ist nicht automatisch im Mandanten vorhanden. Wenn Sie über Berechtigungen für Ihren Mandanten verfügen, können Sie die folgenden Schritte ausführen. Wenn Sie einen Mandanten verwenden, der Ihnen in der Schulung zur Verfügung gestellt wird, verfügen Sie nicht über die entsprechenden Berechtigungen zum Erstellen von Sicherheitsgruppen. Bitte lesen Sie die Aufgaben durch, beachten Sie jedoch, dass Sie diese nicht abschließen können, wenn die Sicherheitsgruppe nicht vorhanden ist. **Fahren Sie nach dem Lesen mit dem Aufräumen fort.**
+Diese Aufgabe setzt das Vorhandensein einer Sicherheitsgruppe **Salespeople_Australia** in dem Mandanten voraus, in dem Sie arbeiten. Diese Sicherheitsgruppe ist nicht automatisch im Mandanten vorhanden. Wenn Sie über Berechtigungen für Ihren Mandanten verfügen, können Sie die folgenden Schritte ausführen. Wenn Sie einen Mandanten verwenden, der Ihnen in der Schulung zur Verfügung gestellt wird, verfügen Sie nicht über die entsprechenden Berechtigungen zum Erstellen von Sicherheitsgruppen. Bitte lesen Sie die Aufgaben durch, beachten Sie jedoch, dass Sie diese nicht abschließen können, wenn die Sicherheitsgruppe nicht vorhanden ist. **Nach dem Durchlesen fahren Sie mit der Aufgabe "Bereinigung" fort.**
 
-1. Wechseln sie zum Power BI-Dienst (Webbrowser).
+1. Wechseln Sie zum Power BI-Dienst (Webbrowser).
 
-2. Beachten Sie auf der Startseite des Arbeitsbereichs die **Vertriebsanalyse – Erzwingen des Modellsicherheitsdatensatzes** .
+2. Auf der Landing Page des Arbeitsbereichs finden Sie den Datensatz **Verkaufsanalyse - Modellsicherheit erzwingen**.
 
     ![](../images/dp500-enforce-model-security-image31.png)
 
 
-3. Zeigen Sie mit dem Mauszeiger auf das Dataset, und wenn die Auslassungspunkte angezeigt werden, wählen Sie die Auslassungspunkte aus, und wählen Sie dann "Sicherheit"** aus**.
+3. Bewegen Sie den Mauszeiger über den Datensatz, und wenn die Auslassungspunkte erscheinen, wählen Sie die Auslassungspunkte aus und wählen dann **Sicherheit** aus.
 
     ![](../images/dp500-enforce-model-security-image32.png)
 
-    *Die **Sicherheitsoption** unterstützt die Zuordnung von Microsoft Azure Active Directory (Azure AD)-Sicherheitsprinzipale, die Sicherheitsgruppen und Benutzer umfassen.*
+    *Die Option **Sicherheit** unterstützt die Zuordnung von Microsoft Azure Active Directory (Azure AD) Sicherheitsprinzipalen, die Sicherheitsgruppen und Benutzer*innen umfassen.*
 
 4. Beachten Sie links die Liste der Rollen, und dass **Australien** ausgewählt ist.
 
     ![](../images/dp500-enforce-model-security-image33.png)
 
-5. Beginnen Sie im Feld "Mitglieder" mit der **Eingabe **Salespeople_Australia**.** 
+5. Beginnen Sie im Feld **Mitglieder*innen** mit der Eingabe von **Salespeople_Australia**. 
 
     *Die Schritte 5 bis 8 dienen nur zu Demonstrationszwecken, da sie sich auf die Erstellung oder Existenz einer Salespeople_Australia Sicherheitsgruppe verlassen. Wenn Sie über Berechtigungen und das Wissen zum Erstellen von Sicherheitsgruppen verfügen, können Sie fortfahren. Fahren Sie andernfalls mit der Bereinigungsaufgabe fort.*
 
     ![](../images/dp500-enforce-model-security-image34.png)
 
-6. Klicken Sie auf **Hinzufügen**.
+6. Wählen Sie **Hinzufügen** aus.
 
     ![](../images/dp500-enforce-model-security-image35.png)
 
-7. Um die Rollenzuordnung abzuschließen, wählen Sie "Speichern" aus****.
+7. Um die Rollenzuordnung abzuschließen, wählen Sie **Speichern**.
 
     ![](../images/dp500-enforce-model-security-image36.png)
 
-    *Jetzt werden alle Mitglieder der **Salespeople_Australia** Sicherheitsgruppe der **Rolle Australien** zugeordnet, wodurch der Datenzugriff auf die Anzeige nur australischer Verkäufe beschränkt wird.*
+    *Jetzt werden alle Mitglieder der **Salespeople_Australia** Sicherheitsgruppe der Rolle **Australien** zugeordnet, wodurch der Datenzugriff auf die Anzeige nur australischer Verkäufe beschränkt wird.*
 
     *In einer realen Lösung sollte jede Rolle einer Sicherheitsgruppe zugeordnet werden.*
 
@@ -287,14 +287,14 @@ Diese Aufgabe basiert auf dem Vorhandensein einer **Salespeople_Australia** Sich
 
     *In der nächsten Übung erstellen Sie eine dynamische Rolle, die datengesteuert ist. Dieser Entwurfsansatz kann dabei helfen, diese Nachteile zu beheben.*
 
-8. Um zur Arbeitsbereich-Zielseite zurückzukehren, wählen Sie im **Navigationsbereich** den Arbeitsbereich aus.
+8. Um zur Landing Page des Arbeitsbereichs zurückzukehren, wählen Sie im Bereich **Navigation** den Arbeitsbereich aus.
 
 
-### Bereinigen Sie die Lösung.
+### Bereinigen Sie die Lösung
 
-In dieser Aufgabe sauber Sie die Lösung, indem Sie das Dataset und die Modellrollen entfernen.
+In dieser Aufgabe bereinigen Sie die Lösung, indem Sie das Dataset und die Modellrollen entfernen.
 
-1. Um das Dataset zu entfernen, zeigen Sie mit dem Mauszeiger auf das Dataset, und wenn die Auslassungspunkte angezeigt werden, wählen Sie die Auslassungspunkte aus, und wählen Sie dann "Löschen"** aus**.
+1. Um den Datensatz zu entfernen, bewegen Sie den Mauszeiger über den Datensatz. Wenn die Auslassungspunkte erscheinen, wählen Sie die Auslassungspunkte aus und wählen dann **Löschen**.
 
     ![](../images/dp500-enforce-model-security-image37.png)
 
@@ -307,21 +307,21 @@ In dieser Aufgabe sauber Sie die Lösung, indem Sie das Dataset und die Modellro
 3. Wechseln Sie zurück zu Power BI Desktop.
  
 
-4. Wählen Sie zum Löschen der Rolle auf der Registerkarte **Modellierung** des Menübands in der Gruppe **Sicherheit** die Option **Rollen verwalten** aus.
+4. Um die Sicherheitsrollen zu entfernen, wählen Sie auf der Registerkarte des Menübands **Modellierung** in der Gruppe **Sicherheit** die Option **Rollen verwalten**.
 
     ![](../images/dp500-enforce-model-security-image39.png)
 
-5. Wählen Sie im **Fenster "Rollen** verwalten" die Option "Löschen **" aus**, um die erste Rolle zu entfernen.
+5. Im Fenster **Rollen verwalten** wählen Sie **Löschen**, um die erste Rolle zu entfernen.
 
     ![](../images/dp500-enforce-model-security-image40.png)
 
-6. Wenn Sie aufgefordert werden, den Löschvorgang zu bestätigen, wählen Sie **Ja, Löschen** aus.
+6. Wenn Sie aufgefordert werden, den Löschvorgang zu bestätigen, drücken Sie **Ja, löschen**.
 
     ![](../images/dp500-enforce-model-security-image41.png)
 
 7. Entfernen Sie auch die zweite Rolle.
 
-8. Klicken Sie auf **Speichern**.
+8. Wählen Sie **Speichern**.
 
     ![](../images/dp500-enforce-model-security-image42.png)
 
@@ -330,52 +330,52 @@ In dieser Aufgabe sauber Sie die Lösung, indem Sie das Dataset und die Modellro
 
 In dieser Übung fügen Sie dem Modell eine Tabelle hinzu, erstellen und überprüfen eine dynamische Rolle und ordnen dann der Datasetrolle einen Sicherheitsprinzipal zu.
 
-### Erstellen der Tabelle „Salesperson“
+### Erstellen der Tabelle „Vertriebsmitarbeiter“
 
-In dieser Aufgabe fügen Sie dem Modell die **Tabelle "Verkäufer** " hinzu.
+In dieser Aufgabe fügen Sie dem Modell die Tabelle **Vertriebsmitarbeiter** hinzu.
 
-1. Wechseln Sie zur Ansicht „Modell“.
+1. Wechseln Sie zur Ansicht**Modell**.
 
     ![](../images/dp500-enforce-model-security-image43.png)
 
-2. Klicken Sie auf der Registerkarte Start des Menübands in der Gruppe Abfragen auf das Symbol Daten transformieren, um das Fenster Power Query-Editor zu öffnen.
+2. Wählen Sie auf der Registerkarte des Menübands **Start** in der Gruppe **Abfragen** das Symbol **Daten transformieren** aus.
 
     ![](../images/dp500-enforce-model-security-image44.png)
 
 
-3. Klicken Sie im **fenster Power Query-Editor** im **Bereich "Abfragen**" (links) mit der rechten Maustaste auf die **Kundenabfrage**, und wählen Sie dann "Duplizieren"** aus**.
+3. Klicken Sie im Fenster **Power Query Editor** im Bereich **Queries** (auf der linken Seite) mit der rechten Maustaste auf die Abfrage **Kunde** und wählen Sie dann **Duplizieren**.
 
     ![](../images/dp500-enforce-model-security-image45.png)
 
     *Da die **Kundenabfrage** bereits Schritte zum Verbinden des Data Warehouse enthält, ist die Duplizierung eine effiziente Möglichkeit, die Entwicklung einer neuen Abfrage zu beginnen.*
 
-4. Ersetzen Sie zum Umbenennen der Abfrage im Bereich Abfrageeinstellungen (rechts) den Text im Feld Name durch Salesperson, und drücken Sie die EINGABETASTE.
+4. Ersetzen Sie im Bereich **Abfrageeinstellungen** (auf der rechten Seite) im Feld **Name** den Text durch **Vertriebsmitarbeiter**.
 
     ![](../images/dp500-enforce-model-security-image46.png)
 
 
-5. Klicken Sie in der Liste "Angewendete Schritte" mit der **rechten Maustaste auf den **Schritt "Andere Spalten** entfernen" (dritter Schritt), und wählen Sie dann "Bis Ende** löschen" aus**.**
+5. Klicken Sie in der Liste **Angewandte Schritte** mit der rechten Maustaste auf den Schritt **Entfernte andere Spalten** (dritter Schritt), und wählen Sie dann **Löschen bis Ende**.
 
     ![](../images/dp500-enforce-model-security-image47.png)
 
-6. Wenn Sie aufgefordert werden, den Löschvorgang zu bestätigen, klicken Sie auf **Löschen**.
+6. Wenn Sie aufgefordert werden, das Löschen des Schritts zu bestätigen, wählen Sie **Löschen**.
 
     ![](../images/dp500-enforce-model-security-image48.png)
 
-7. Um Daten aus einer anderen Data Warehouse-Tabelle zu erstellen, wählen Sie in der **Liste "Angewendete Schritte** " im **Navigationsschritt** (zweiter Schritt) das Zahnradsymbol (rechts) aus.
+7. Um Daten aus einer anderen Data-Warehouse-Tabelle zu beziehen, wählen Sie in der Liste **Angewandte Schritte** im Schritt **Navigation** (zweiter Schritt) das Zahnradsymbol (rechts).
 
     ![](../images/dp500-enforce-model-security-image49.png)
 
-8. Wählen Sie im **Navigationsfenster** die **Tabelle "DimEmployee** " aus.
+8. Wählen Sie im Fenster **Navigation** die Tabelle **DimEmployee**.
 
     ![](../images/dp500-enforce-model-security-image50.png)
 
 
-9. Wählen Sie **OK** aus.
+9. Klickan Sie auf **OK**.
 
     ![](../images/dp500-enforce-model-security-image51.png)
 
-10. Klicken Sie auf der Registerkarte **Start** des Menübands in der Gruppe **Spalten verwalten** auf das Symbol **Spalten auswählen**, um Spalten zu entfernen.
+10. Klicken Sie auf der Registerkarte **Start** des Menübands in der Gruppe **Spalten verwalten** auf das Symbol **Spalten auswählen**, um unnötige Spalten zu entfernen.
 
     ![](../images/dp500-enforce-model-security-image52.png)
 
@@ -391,29 +391,29 @@ In dieser Aufgabe fügen Sie dem Modell die **Tabelle "Verkäufer** " hinzu.
 
     - EmailAddress
 
-13. Wählen Sie **OK** aus.
+13. Klickan Sie auf **OK**.
 
     ![](../images/dp500-enforce-model-security-image54.png)
 
-14. Um die **Spalte "EmailAddress** " umzubenennen, doppelklicken Sie auf die **Spaltenüberschrift "EmailAddress** ".
+14. Um die Spalte **EmailAdresse** umzubenennen, doppelklicken Sie auf die Spaltenüberschrift **EmailAdresse**.
 
-15. Ersetzen Sie den Text durch **EmployeeID**, und drücken Sie die **EINGABETASTE**.
+15. Ersetzen Sie den Text durch **UPN**, und drücken Sie dann die **Eingabetaste**.
 
-    *UPN ist ein Akronym für den Benutzerprinzipalnamen. Die Werte in dieser Spalte stimmen mit den Namen des Azure AD-Kontos überein.*
+    *UPN ist ein Akronym für User Principal Name. Die Werte in dieser Spalte entsprechen den Azure AD-Kontonamen.*
 
     ![](../images/dp500-enforce-model-security-image55.png)
 
-16. Um die Tabelle in das Modell zu laden, wählen Sie **auf der Registerkarte "Start" das **** Symbol "Übernehmen schließen&amp;"** aus.
+16. Um die Tabelle in das Modell zu laden, wählen Sie auf der Registerkarte des Menübands **Start **das Symbol** &amp;Anwenden** aus.
 
     ![](../images/dp500-enforce-model-security-image56.png)
 
-17. Wenn die Tabelle dem Modell hinzugefügt wurde, beachten Sie, dass automatisch eine Beziehung zur **Tabelle "Sales Territory** " erstellt wurde.
+17. Nach dem Hinzufügen der Tabelle zum Modell ist zu beachten, dass automatisch eine Beziehung zur Tabelle **Vertriebsgebiet** erstellt wurde.
 
 ### Konfigurieren von Beziehungen
 
 In dieser Aufgabe konfigurieren Sie die Eigenschaften der neuen Beziehung.
 
-1. Klicken Sie mit der rechten Maustaste auf die inaktive Beziehung zwischen den Tabellen **Salesperson (Performance)** und **Sales**, und wählen Sie **Löschen** aus.
+1. Klicken Sie mit der rechten Maustaste auf die Beziehung zwischen den Tabellen **Verkäufer** und **Verkaufsgebiet**, und wählen Sie dann **Eigenschaften**.
 
     ![](../images/dp500-enforce-model-security-image57.png)
 
@@ -424,17 +424,17 @@ In dieser Aufgabe konfigurieren Sie die Eigenschaften der neuen Beziehung.
 
     ![](../images/dp500-enforce-model-security-image58.png)
 
-    *Da eine 1:n-Beziehung aus der **Tabelle "Sales Territory" zur **Tabelle "Verkäufer**" vorhanden ist, werden Filter nur aus der **Tabelle "Sales Territory****" in die **Tabelle "Verkäufer**" verteilt. Um die Verteilung in der anderen Richtung zu erzwingen, muss die Kreuzfilterrichtung auf beide festgelegt werden.*
+     *Da es eine eins-zu-viele-Beziehung zwischen der Tabelle **Vertriebsgebiet** und der Tabelle **Vertriebsmitarbeiter*innen** gibt, werden Filter nur von der Tabelle **Vertriebsgebiet** zur Tabelle **Vertriebsmitarbeiter*inn** übertragen. Um die Weitergabe in die andere Richtung zu erzwingen, muss die Crossfilter-Richtung auf "beide" gesetzt werden.*
 
-4. Wählen Sie **OK** aus.
+4. Klickan Sie auf **OK**.
 
     ![](../images/dp500-enforce-model-security-image59.png)
 
-5. Um die Tabelle auszublenden, wählen Sie oben rechts in der **Tabelle "Verkäufer** " das Augensymbol aus.
+5. Um die Tabelle auszublenden, wählen Sie oben rechts in der Tabelle **Vertriebsmitarbeiter*innen** das Augensymbol.
 
     ![](../images/dp500-enforce-model-security-image60.png)
 
-    *Der Zweck der **Tabelle "Verkäufer** " besteht darin, Datenberechtigungen zu erzwingen. Wenn sie ausgeblendet sind, werden Berichtsautoren und die Q&A-Erfahrung die Tabelle oder die zugehörigen Felder nicht sehen.*
+    *Der Zweck der Tabelle **Vertriebsmitarbeiter*innen** ist es, Datenberechtigungen zu erzwingen. Wenn sie ausgeblendet ist, sehen die Berichtsautoren und die Q&A-Erfahrung die Tabelle oder ihre Felder nicht.*
  
 
 ### Erstellen einer dynamischen Rolle
@@ -445,7 +445,7 @@ In dieser Aufgabe erstellen Sie eine dynamische Rolle, die Berechtigungen basier
 
     ![](../images/dp500-enforce-model-security-image61.png)
 
-2. Wählen Sie auf der Registerkarte **Modellierung** des Menübands in der Gruppe **Sicherheit** die Option **Rollen verwalten** aus.
+2. Um eine Sicherheitsrolle hinzuzufügen, wählen Sie auf der Registerkarte des Menübands **Modellierung** in der Gruppe **Sicherheit** die Option **Rollen verwalten**.
 
     ![](../images/dp500-enforce-model-security-image62.png)
 
@@ -459,19 +459,19 @@ In dieser Aufgabe erstellen Sie eine dynamische Rolle, die Berechtigungen basier
 
     *Diesmal muss nur eine Rolle erstellt werden.*
 
-5. Fügen Sie der **UPN-Spalte** der **Tabelle "Verkäufer** " einen Filter hinzu.
+5. Fügen Sie der **UPN-Spalte** der Tabelle **Vertriebsmitarbeiter** einen Filter hinzu.
 
     ![](../images/dp500-enforce-model-security-image65.png)
 
-6. Ändern Sie im Feld **Tabellenfilter-DAX-Ausdruck** den Ausdruck, indem Sie **Value** durch **USERPRINCIPALNAME()** ersetzen.
+6. Ersetzen Sie im Feld **Tabellenfilter DAX-Ausdruck** **"Wert"** durch **USERPRINCIPALNAME()**.
 
     ![](../images/dp500-enforce-model-security-image66.png)
 
-    *Dieser Ausdruck filtert die **UPN-Spalte** nach der USERPRINCIPALNAME-Funktion, die den Benutzerprinzipalnamen (UPN) des authentifizierten Benutzers zurückgibt.*
+    *Dieser Ausdruck filtert die Spalte **UPN** nach der Funktion USERPRINCIPALNAME, die den Benutzerprinzipalnamen (UPN) des/der authentifizierten Benutzer*in zurückgibt.*
 
-    *Wenn der UPN die **Tabelle "Verkäufer** " filtert, filtert er die **Tabelle "Sales Territory** ", die wiederum die **Tabelle "Sales** " filtert. Auf diese Weise werden dem authentifizierten Benutzer nur Verkaufsdaten für seine zugewiesene Region angezeigt.*
+    *Wenn die UPN die Tabelle **Vertriebsmitarbeiter*innen** filtert, filtert sie die Tabelle **Vertriebsgebiet**, die wiederum die Tabelle **Umsatz** filtert. Auf diese Weise sieht der authentifizierte Benutzende nur die Umsatzdaten für das ihm zugewiesene Gebiet.*
 
-7. Klicken Sie auf **Speichern**.
+7. Wählen Sie **Speichern**.
 
     ![](../images/dp500-enforce-model-security-image67.png)
 
@@ -479,22 +479,22 @@ In dieser Aufgabe erstellen Sie eine dynamische Rolle, die Berechtigungen basier
 
 In dieser Aufgabe überprüfen Sie die dynamische Rolle.
 
-1. Wählen Sie auf der Registerkarte **Modellierung** des Menübands in der Gruppe **Sicherheit** die Option **Rollen verwalten** aus.
+1. Wählen Sie auf der Registerkarte des Menübands **Modellierung** in der Gruppe **Sicherheit** die Option **Anzeigen als**.
 
     ![](../images/dp500-enforce-model-security-image68.png)
 
 
-2. Aktivieren Sie im Fenster **Als Rollen anzeigen** das Element **Anderer Benutzer**, und geben Sie dann in das entsprechende Feld Folgendes ein: **michael9@adventure-works.com**
+2. Im Fenster **Als Rollen anzeigen** markieren Sie **Anderer Benutzer**, und geben Sie dann in das entsprechende Feld ein: **michael9@adventure-works.com**
 
     ![](../images/dp500-enforce-model-security-image69.png)
 
-    *Für Testzwecke ist der andere Benutzer** der Wert, **der von der USERPRINCIPALNAME-Funktion zurückgegeben wird. Beachten Sie, dass dieser Verkäufer der **Region "Nordosten**" zugewiesen ist.*
+    *Zu Testzwecken ist **Anderer Benutzender** der Wert, der von der Funktion USERPRINCIPALNAME zurückgegeben wird. Beachten Sie, dass diese*r Vertriebsmitarbeiter*in der Region **Nordost** zugeordnet ist.*
 
 3. Wählen Sie die Rolle **Salespeople** aus.
 
     ![](../images/dp500-enforce-model-security-image70.png)
 
-4. Wählen Sie **OK** aus.
+4. Klickan Sie auf **OK**.
 
     ![](../images/dp500-enforce-model-security-image71.png)
 
@@ -502,16 +502,16 @@ In dieser Aufgabe überprüfen Sie die dynamische Rolle.
 
     ![](../images/dp500-enforce-model-security-image72.png)
 
-6. Beachten Sie oben im Bericht das gelbe Banner, das die erzwungene Rolle bestätigt.
+6. Am oberen Rand des Berichts finden Sie ein gelbes Banner, das die erzwungene Rolle bestätigt.
 
     ![](../images/dp500-enforce-model-security-image73.png)
 
 
-7. Um die Anzeige mithilfe der Rolle zu beenden, wählen Sie **rechts neben dem gelben Banner die Option "Anzeige beenden"** aus.
+7. Um die Anzeige mit Hilfe der Rolle zu beenden, wählen Sie rechts neben dem gelben Banner **Anzeige beenden**.
 
     ![](../images/dp500-enforce-model-security-image74.png)
 
-### Fertigstellen des Designs
+### Fertigstellen des Entwurfs
 
 In dieser Aufgabe schließen Sie den Entwurf ab, indem Sie den Bericht veröffentlichen und eine Sicherheitsgruppe der Rolle zuordnen.
 
@@ -521,18 +521,18 @@ In dieser Aufgabe schließen Sie den Entwurf ab, indem Sie den Bericht veröffen
 
     ![](../images/dp500-enforce-model-security-image75.png)
 
-2. Veröffentlichen Sie den Bericht im Arbeitsbereich, den Sie am Anfang der Übung erstellt haben. 
+2. Veröffentlichen Sie den Bericht im Arbeitsbereich, den Sie am Anfang des Labs erstellt haben. 
 
 3. Schließen Sie Power BI Desktop.
 
-4. Wechseln sie zum Power BI-Dienst (Webbrowser).
+4. Wechseln Sie zum Power BI-Dienst (Webbrowser).
 
-5. Wechseln Sie zu den Sicherheitseinstellungen für die **Vertriebsanalyse – Erzwingen des Modellsicherheitsdatensatzes** .
+5. Gehen Sie zu den Sicherheitseinstellungen für den Datensatz **Vertriebsanalyse - Modellsicherheit erzwingen**.
 
-6. Ordnen Sie die Sicherheitsgruppe " **Vertriebsmitarbeiter** " der **Rolle "Vertriebsmitarbeiter** " zu.
+6. Ordnen Sie der Sicherheitsgruppe **Vertriebsmitarbeiter*innen** die Rolle **Vertriebsmitarbeiter*innen** zu.
 
     ![](../images/dp500-enforce-model-security-image76.png)
 
-    *Jetzt werden alle Mitglieder der **Sicherheitsgruppe "Vertriebsmitarbeiter** " der **Rolle "Vertriebsmitarbeiter** " zugeordnet. Wenn der authentifizierte Benutzer durch eine Zeile in der **Tabelle "Verkäufer** " dargestellt wird, wird das zugewiesene Vertriebsgebiet verwendet, um die Umsatztabelle zu filtern.*
+    *Nun werden alle Mitglieder der Sicherheitsgruppe **Vertreibsmitarbeiter*in** der Rolle **Vertriebsmitarbeiter*in** zugeordnet. Sofern der authentifizierte Benutzer durch eine Zeile in der Tabelle **Verkäufer** repräsentiert wird, wird das zugewiesene Vertriebsgebiet zum Filtern der Umsatztabelle verwendet.*
 
     *Dieser Entwurfsansatz ist einfach und effektiv, wenn das Datenmodell die Werte für den Benutzerprinzipalnamen speichert. Wenn Vertriebsmitarbeiter hinzugefügt oder entfernt oder verschiedenen Vertriebsgebieten zugewiesen werden, funktioniert dieser Entwurfsansatz einfach.*

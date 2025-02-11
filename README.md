@@ -1,11 +1,3 @@
-#README
-
-We've turned off the ability to report issues directly on this repo and do not monitor PRs.
-
-Provide feedback here: https://aka.ms/provide-feedback
-
-Or, if you are a trainer with a microsoft.com email address, please create a ticket in AzDO.
-
 ## **Dieser Kurs wird am **30.04.2024** eingestellt. Wir überwachen dieses Repository nicht mehr auf Issues und Pull Requests. Nachdem der Kurs eingestellt wurde, werden alle GitHub-Repositorys entfernt. Verwandte Inhalte finden Sie im [Microsoft Fabric-Repository](https://github.com/MicrosoftLearning/mslearn-fabric) und [DP-203 Azure Data Engineer-Repository](https://github.com/MicrosoftLearning/dp-203-azure-data-engineer).**
 
 # DP-500: Entwerfen und Implementieren von Analyselösungen auf Unternehmensebene mit Microsoft Azure
